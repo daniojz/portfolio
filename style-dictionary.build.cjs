@@ -59,20 +59,38 @@ StyleDictionary.registerTransform({
   },
 })
 
+StyleDictionary.registerTransform({
+  name: 'breakpoint/px',
+  type: 'value',
+  transitive: true,
+  matcher: function (token) {
+    return token.path.includes('breakpoint')
+  },
+  transformer: (token) => {
+    return `${token.value}px`
+  },
+})
+
+StyleDictionary.registerTransformGroup({
+  name: 'figmaJsonToCss',
+  transforms: [
+    'typography.roboto/shorthand',
+    'shadow/shorthand',
+    'breakpoint/px',
+    'attribute/cti',
+    'name/cti/kebab',
+    'time/seconds',
+    'content/icon',
+    'size/rem',
+    'color/css',
+  ],
+})
+
 const globalStyleDictionary = StyleDictionary.extend({
   source: ['./src/styles/tokens/figmaTokens/global.json'],
   platforms: {
     css: {
-      transforms: [
-        'typography.roboto/shorthand',
-        'shadow/shorthand',
-        'attribute/cti',
-        'name/cti/kebab',
-        'time/seconds',
-        'content/icon',
-        'size/rem',
-        'color/css',
-      ],
+      transformGroup: 'figmaJsonToCss',
       buildPath: './src/styles/tokens/',
       files: [
         {
@@ -90,16 +108,7 @@ const lightStyleDictionary = globalStyleDictionary.extend({
   source: ['./src/styles/tokens/figmaTokens/theme_light.json'],
   platforms: {
     css: {
-      transforms: [
-        'typography.roboto/shorthand',
-        'shadow/shorthand',
-        'attribute/cti',
-        'name/cti/kebab',
-        'time/seconds',
-        'content/icon',
-        'size/rem',
-        'color/css',
-      ],
+      transformGroup: 'figmaJsonToCss',
       buildPath: './src/styles/tokens/',
       files: [
         {
@@ -117,16 +126,7 @@ const darkStyleDictionary = globalStyleDictionary.extend({
   source: ['./src/styles/tokens/figmaTokens/theme_dark.json'],
   platforms: {
     css: {
-      transforms: [
-        'typography.roboto/shorthand',
-        'shadow/shorthand',
-        'attribute/cti',
-        'name/cti/kebab',
-        'time/seconds',
-        'content/icon',
-        'size/rem',
-        'color/css',
-      ],
+      transformGroup: 'figmaJsonToCss',
       buildPath: './src/styles/tokens/',
       files: [
         {

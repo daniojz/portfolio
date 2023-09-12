@@ -17,7 +17,7 @@
   --color-global-neutral-150: #e4e4e4;
   --color-global-neutral-300: #b3b3b3;
   --color-global-neutral-400: #7c7c7c;
-  --color-global-neutral-500: #b3b3b3;
+  --color-global-neutral-500: #414141;
   --color-global-neutral-900: #101010;
   --color-global-neutral-1000: #000000;
   --border-radius-circle: 100;
@@ -56,4 +56,8 @@
   --text-case-none: none;
   --text-decoration-none: none;
   --paragraph-indent-0: 0px;
+  --breakpoint-big-screen: 1200px;
+  --breakpoint-medium-screen: 992px;
+  --breakpoint-small-screen: 768px;
+  --breakpoint-super-small-screen: 576px;
 }
