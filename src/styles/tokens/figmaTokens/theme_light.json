@@ -141,7 +141,7 @@
           "type": "color"
         },
         "header": {
-          "value": "conic-gradient(from 180deg at 50% 50%, #E2F5FF 31.87499910593033deg, #E2F5FF 108.75000357627869deg, #71ADD9 262.5000071525574deg)",
+          "value": "linear-gradient(236deg, rgba(91, 152, 198, 0.63) 7.41%, #E2F5FF 68.94%);",
           "type": "color"
         },
         "footer": {

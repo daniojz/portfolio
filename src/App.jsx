@@ -1,20 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ParallaxProvider } from 'react-scroll-parallax'
 import Home from './pages/home/Home'
 
 function App() {
   return (
-    <Router>
+    <ParallaxProvider>
       <div className='App'>
-        <header></header>
-        <main>
-          <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route exact path='/home' element={<Home />} />
-          </Routes>
-        </main>
+        <Home></Home>
         <footer></footer>
       </div>
-    </Router>
+    </ParallaxProvider>
   )
 }
 

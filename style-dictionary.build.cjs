@@ -7,7 +7,7 @@ StyleDictionary.registerFormat({
     const { outputReferences } = options
     const theme = this.theme ? this.theme : ''
     return (
-      `:root[data-theme='${theme}'] {\n` +
+      `html[data-theme='${theme}'] {\n` +
       formattedVariables({ format: 'css', dictionary, outputReferences }) +
       '\n}\n'
     )
@@ -60,14 +60,26 @@ StyleDictionary.registerTransform({
 })
 
 StyleDictionary.registerTransform({
-  name: 'breakpoint/px',
+  name: 'unit/px',
   type: 'value',
   transitive: true,
   matcher: function (token) {
-    return token.path.includes('breakpoint')
+    return token.path.includes('breakpoint') /* || token.type === '' */
   },
   transformer: (token) => {
     return `${token.value}px`
+  },
+})
+
+StyleDictionary.registerTransform({
+  name: 'unit/%',
+  type: 'value',
+  transitive: true,
+  matcher: function (token) {
+    return token.type === 'borderRadius' /* || token.type === '' */
+  },
+  transformer: (token) => {
+    return `${token.value}%`
   },
 })
 
@@ -76,13 +88,13 @@ StyleDictionary.registerTransformGroup({
   transforms: [
     'typography.roboto/shorthand',
     'shadow/shorthand',
-    'breakpoint/px',
+    'unit/px',
+    'unit/%',
     'attribute/cti',
     'name/cti/kebab',
     'time/seconds',
     'content/icon',
     'size/rem',
-    'color/css',
   ],
 })
 

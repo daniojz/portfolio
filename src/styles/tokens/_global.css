@@ -1,4 +1,4 @@
-:root[data-theme=''] {
+html[data-theme=''] {
   --color-global-primary-200: #e2f5ff;
   --color-global-primary-300: #c0d0e9;
   --color-global-primary-400: #71add9;
@@ -19,12 +19,12 @@
   --color-global-neutral-400: #7c7c7c;
   --color-global-neutral-500: #414141;
   --color-global-neutral-900: #101010;
-  --color-global-neutral-1000: #000000;
-  --border-radius-circle: 100;
-  --border-radius-large: 16;
-  --border-radius-medium: 8;
-  --border-radius-small: 4;
-  --border-radius-zero: 0;
+  --color-global-neutral-1000: #000;
+  --border-radius-circle: 100%;
+  --border-radius-large: 16%;
+  --border-radius-medium: 8%;
+  --border-radius-small: 4%;
+  --border-radius-zero: 0%;
   --typography-super-title: 700 96pt Roboto;
   --typography-title1: 700 64pt Roboto;
   --typography-title2: 600 48pt Roboto;
