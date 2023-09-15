@@ -1,0 +1,7 @@
+.parallaxWrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 1px;
+  background: var(--color-background-general-header);
+}
