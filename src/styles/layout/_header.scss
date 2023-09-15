@@ -1,10 +1,9 @@
 header {
   width: 100vw;
   height: 100vh;
-  background: var(--color-background-general-header);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
+  transform-style: preserve-3d;
 }

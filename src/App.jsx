@@ -1,14 +1,13 @@
-import { ParallaxProvider } from 'react-scroll-parallax'
 import Home from './pages/home/Home'
 
 function App() {
   return (
-    <ParallaxProvider>
-      <div className='App'>
+    <div className='App'>
+      <div className='parallaxWrapper'>
         <Home></Home>
         <footer></footer>
       </div>
-    </ParallaxProvider>
+    </div>
   )
 }
 
