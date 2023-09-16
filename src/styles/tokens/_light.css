@@ -57,13 +57,6 @@ html[data-theme='light'] {
   --color-text-neutral-400: #7C7C7C;
   --color-text-neutral-500: #414141;
   --color-text-neutral-900: #101010;
-  --color-icons-neutral-50: #FFFFFF;
-  --color-icons-neutral-100: #F5F5F5;
-  --color-icons-neutral-150: #E4E4E4;
-  --color-icons-neutral-300: #B3B3B3;
-  --color-icons-neutral-400: #7C7C7C;
-  --color-icons-neutral-500: #414141;
-  --color-icons-neutral-900: #101010;
   --color-view-shadow-primary: #4687bd;
   --color-view-shadow-secondary: #FF88F3;
   --color-view-shadow-neutral: #101010;
@@ -71,6 +64,12 @@ html[data-theme='light'] {
   --color-circle-values: linear-gradient(161deg, #FFF 27.08%, rgba(134, 134, 134, 0.00) 84.61%);
   --color-circle-concepts: linear-gradient(161deg, #FFF 22.45%, rgba(167, 167, 167, 0.00) 91.6%);
   --color-circle-certifications: linear-gradient(161deg, #FFF 25.3%, rgba(255, 255, 255, 0.00) 91.6%);
+  --color-icons-neutral-50-normal: #FFFFFF;
+  --color-icons-neutral-50-hover: #7C7C7C;
+  --color-icons-neutral-400-normal: #7C7C7C;
+  --color-icons-neutral-400-hover: #414141;
+  --color-icons-neutral-500-normal: #414141;
+  --color-icons-neutral-500-hover: #101010;
   --border-radius-circle: 100%;
   --border-radius-large: 16%;
   --border-radius-medium: 8%;

@@ -6,22 +6,44 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   .logo {
     img {
       position: relative;
       z-index: 100;
-      max-width: 380px;
+      max-width: 370px;
     }
   }
 
   .description {
-    padding: 56px;
+    padding: 48px;
     position: absolute;
     top: 80vh;
-    font: var(--typography-super-small);
-    color: var(--color-text-neutral-500);
+    font: var(--typography-extra-small);
+    color: var(--color-text-neutral-300);
     text-align: center;
+  }
+}
+
+.links {
+  position: relative;
+  top: 40px;
+  filter: blur(1px);
+}
+
+.anchorLink {
+  position: absolute;
+  bottom: 16px;
+  color: var(--color-icons-neutral-50-normal);
+  animation-name: fallDown;
+  animation-duration: 0.5s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: 8;
+  filter: blur(1px);
+
+  :hover {
+    color: var(--color-icons-neutral-50-hover);
   }
 }
 
@@ -36,6 +58,15 @@
   border-radius: var(--border-radius-circle);
   box-shadow: var(--box-shadow-circle-header);
   transform: translateZ(-1px) scale(2);
+}
+
+@keyframes fallDown {
+  from {
+    bottom: 32px;
+  }
+  to {
+    bottom: 16px;
+  }
 }
 
 @media (min-width: 768px) {

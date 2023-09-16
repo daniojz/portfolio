@@ -1,6 +1,6 @@
 //normalizador de css basado en -> https://github.com/eduardofierropro/Reset-CSS/tree/main
 
-/* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+/*  Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -32,9 +32,9 @@ figure {
   max-width: 100%;
   width: 100%;
   display: block;
-  /* (Opcional) */
+  /*  */
   object-fit: cover;
-  /* (Opcional) */
+  /*  */
   object-position: center center;
 }
 
@@ -55,7 +55,7 @@ li {
   list-style-type: none;
 }
 
-/* (Opcional) Configuramos anclas suaves */
+/* Configuramos anclas suaves */
 html {
   scroll-behavior: smooth;
 }
@@ -91,7 +91,7 @@ q:after {
   content: none;
 }
 
-/* (Opcional) Configuramos el texto que seleccionamos */
+/*  Configuramos el texto que seleccionamos */
 ::selection {
   background-color: var(--negro);
   color: var(--blanco);
@@ -110,7 +110,7 @@ label {
   background-color: transparent;
   color: inherit;
   display: block;
-  /* (Opcional) */
+  /*  */
   appearance: none;
 }
 
@@ -135,12 +135,12 @@ body {
   font-size: 100%;
   font-family: var(--tipo-principal);
   color: var(--negro);
-  /* (Opcional) */
+  /*  */
   hyphens: auto;
-  /* (Opcional) */
+  /*  */
   font-smooth: always;
-  /* (Opcional) */
+  /*  */
   -webkit-font-smoothing: antialiased;
-  /* (Opcional) */
+  /*  */
   -moz-osx-font-smoothing: grayscale;
 }

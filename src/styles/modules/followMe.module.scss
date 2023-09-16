@@ -1,0 +1,15 @@
+.container {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 16px;
+
+  a {
+    color: var(--color-icons-neutral-50-normal);
+
+    :hover {
+      color: var(--color-icons-neutral-50-hover);
+    }
+  }
+}
