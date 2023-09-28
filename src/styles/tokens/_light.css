@@ -64,12 +64,12 @@ html[data-theme='light'] {
   --color-circle-values: linear-gradient(161deg, #FFF 27.08%, rgba(134, 134, 134, 0.00) 84.61%);
   --color-circle-concepts: linear-gradient(161deg, #FFF 22.45%, rgba(167, 167, 167, 0.00) 91.6%);
   --color-circle-certifications: linear-gradient(161deg, #FFF 25.3%, rgba(255, 255, 255, 0.00) 91.6%);
-  --color-icons-neutral-50-normal: #FFFFFF;
+  --color-icons-neutral-50-normal: #414141;
   --color-icons-neutral-50-hover: #7C7C7C;
-  --color-icons-neutral-400-normal: #7C7C7C;
-  --color-icons-neutral-400-hover: #414141;
-  --color-icons-neutral-500-normal: #414141;
-  --color-icons-neutral-500-hover: #101010;
+  --color-icons-neutral-400-normal: #B3B3B3;
+  --color-icons-neutral-400-hover: #7C7C7C;
+  --color-icons-neutral-500-normal: #FFFFFF;
+  --color-icons-neutral-500-hover: #B3B3B3;
   --border-radius-circle: 100%;
   --border-radius-large: 16%;
   --border-radius-medium: 8%;

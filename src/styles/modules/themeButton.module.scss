@@ -1,0 +1,10 @@
+.themeButton {
+  left: 95vw;
+  bottom: 3vh;
+  z-index: 100000;
+  color: var(--color-icons-neutral-50-normal);
+
+  :hover {
+    color: var(--color-icons-neutral-50-normal);
+  }
+}

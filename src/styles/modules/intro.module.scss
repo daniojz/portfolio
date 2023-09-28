@@ -1,3 +1,8 @@
+.introSection {
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
 .content {
   width: 100%;
   height: 100vh;
@@ -12,7 +17,7 @@
     img {
       position: relative;
       z-index: 100;
-      max-width: 370px;
+      max-width: 344px;
     }
   }
 
@@ -28,8 +33,7 @@
 
 .links {
   position: relative;
-  top: 40px;
-  filter: blur(1px);
+  top: 48px;
 }
 
 .anchorLink {
@@ -50,8 +54,8 @@
 .circle {
   content: '';
   position: absolute;
-  top: -40vh;
-  left: 150vw;
+  top: -50vh;
+  left: 130vw;
   width: 1000px;
   height: 1000px;
   background: var(--color-circle-header);
@@ -71,6 +75,6 @@
 
 @media (min-width: 768px) {
   .circle {
-    left: 80vw;
+    left: 60vw;
   }
 }

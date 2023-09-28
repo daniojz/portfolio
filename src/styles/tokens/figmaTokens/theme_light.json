@@ -222,7 +222,7 @@
       "neutral": {
         "50": {
           "normal": {
-            "value": "{color.global.neutral.50}",
+            "value": "{color.global.neutral.500}",
             "type": "color"
           },
           "hover": {
@@ -232,21 +232,21 @@
         },
         "400": {
           "normal": {
-            "value": "{color.global.neutral.400}",
+            "value": "{color.global.neutral.300}",
             "type": "color"
           },
           "hover": {
-            "value": "{color.global.neutral.500}",
+            "value": "{color.global.neutral.400}",
             "type": "color"
           }
         },
         "500": {
           "normal": {
-            "value": "{color.global.neutral.500}",
+            "value": "{color.global.neutral.50}",
             "type": "color"
           },
           "hover": {
-            "value": "{color.global.neutral.900}",
+            "value": "{color.global.neutral.300}",
             "type": "color"
           }
         }

@@ -1,12 +1,17 @@
+import NavMenu from './components/NavMenu/NavMenu'
 import Home from './pages/home/Home'
 
 function App() {
   return (
     <div className='App'>
-      <div className='parallaxWrapper'>
-        <Home></Home>
-        <footer></footer>
-      </div>
+      <header>
+        <NavMenu></NavMenu>
+      </header>
+      <main>
+        <div className='parallaxWrapper'>
+          <Home></Home>
+        </div>
+      </main>
     </div>
   )
 }
