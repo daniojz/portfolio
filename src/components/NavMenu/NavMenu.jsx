@@ -71,7 +71,7 @@ const NavMenu = ({ styles, iconSize }) => {
         </ul>
         <div className={style.config}>
           <ThemeButton></ThemeButton>
-          <p>idioma</p>
+          <p>idiom</p>
         </div>
       </div>
     </nav>
