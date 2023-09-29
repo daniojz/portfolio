@@ -1,4 +1,7 @@
 .navMenu {
+  position: fixed;
+  z-index: 10000000;
+  top: 0;
   width: 100vw;
   height: 80px;
   padding: 16px 32px 0px 32px;

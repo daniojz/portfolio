@@ -1,5 +1,6 @@
 import NavMenu from './components/NavMenu/NavMenu'
 import Home from './pages/home/Home'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 function App() {
   return (
@@ -8,9 +9,9 @@ function App() {
         <NavMenu></NavMenu>
       </header>
       <main>
-        <div className='parallaxWrapper'>
+        <ParallaxProvider>
           <Home></Home>
-        </div>
+        </ParallaxProvider>
       </main>
     </div>
   )

@@ -3,7 +3,9 @@ import Intro from './views/Intro'
 const Home = () => {
   return (
     <div id='home'>
-      <Intro></Intro>
+      <header>
+        <Intro></Intro>
+      </header>
       <main id='main'>
         <div style={{ width: '100%', height: '4000px' }}></div>
       </main>

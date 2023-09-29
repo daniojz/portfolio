@@ -1,8 +1,10 @@
 #home {
+  position: relative;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform-style: preserve-3d;
+  background: var(--color-background-general-header);
+  overflow-x: hidden;
 }

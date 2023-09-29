@@ -3,13 +3,17 @@ import { useTranslation } from 'react-i18next'
 import Atropos from 'atropos/react'
 import style from '@styles/modules/intro.module.scss'
 import FollowMe from '@components/FollowMe/FollowMe'
+import { Parallax } from 'react-scroll-parallax'
 
 const Intro = () => {
   const [t, i18n] = useTranslation('home')
 
   return (
-    <section className={style.introSection}>
-      <div className={style.circle}></div>
+    <div className={style.introContainer}>
+      <Parallax translateY={[-150, 100]}>
+        <div className={style.circle}></div>
+      </Parallax>
+
       <div className={style.content}>
         <Atropos
           activeOffset={0}
@@ -32,7 +36,7 @@ const Intro = () => {
       <a href='#main' className={style.anchorLink}>
         <Icon icon='akar-icons:chevron-down' width='24' height='24' />
       </a>
-    </section>
+    </div>
   )
 }
 
