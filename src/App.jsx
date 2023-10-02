@@ -5,9 +5,7 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 function App() {
   return (
     <div className='App'>
-      <header>
-        <NavMenu></NavMenu>
-      </header>
+      <NavMenu></NavMenu>
       <main>
         <ParallaxProvider>
           <Home></Home>

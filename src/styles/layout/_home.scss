@@ -5,6 +5,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: var(--color-background-general-header);
-  overflow-x: hidden;
+  overflow: hidden;
+
+  header {
+    background: var(--color-background-general-header);
+  }
+  .main {
+    backdrop-filter: blur(16px);
+  }
 }

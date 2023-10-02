@@ -6,9 +6,9 @@ const Home = () => {
       <header>
         <Intro></Intro>
       </header>
-      <main id='main'>
-        <div style={{ width: '100%', height: '4000px' }}></div>
-      </main>
+      <div className='main'>
+        <section style={{ width: '100%', height: '4000px' }}></section>
+      </div>
     </div>
   )
 }

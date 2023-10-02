@@ -10,15 +10,15 @@ i18next
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
-    fallbackLng: 'es',
+    fallbackLng: ['Español', 'English'],
     interpolation: { escapeValue: false },
     returnObjects: 'true',
     resources: {
-      es: {
+      Español: {
         global: globalES,
         home: homeES,
       },
-      en: {
+      English: {
         global: globalEN,
         home: homeEN,
       },

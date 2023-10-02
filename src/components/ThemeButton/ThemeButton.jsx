@@ -24,8 +24,8 @@ const ThemeButton = () => {
     <button title='themeButton' onClick={onClickHandler} className={style.themeButton}>
       <Icon
         icon={theme === 'light' ? 'akar-icons:moon-fill' : 'akar-icons:sun-fill'}
-        width={40}
-        height={40}
+        width={32}
+        height={32}
       />
     </button>
   )

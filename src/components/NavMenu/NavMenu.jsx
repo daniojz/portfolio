@@ -2,6 +2,7 @@ import { Icon } from '@iconify/react'
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import ThemeButton from '../../components/ThemeButton/ThemeButton'
+import LanguajeButton from '../LanguajeButton/LanguajeButton'
 import PropTypes from 'prop-types'
 import style from '@styles/modules/navMenu.module.scss'
 
@@ -71,7 +72,7 @@ const NavMenu = ({ styles, iconSize }) => {
         </ul>
         <div className={style.config}>
           <ThemeButton></ThemeButton>
-          <p>idiom</p>
+          <LanguajeButton></LanguajeButton>
         </div>
       </div>
     </nav>

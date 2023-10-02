@@ -52,11 +52,11 @@ html[data-theme='light'] {
   --color-background-general-concepts: linear-gradient(90deg, #D8ADD3 0.1%, #C1C1C1 98.41%);;
   --color-text-neutral-50: #FFFFFF;
   --color-text-neutral-100: #F5F5F5;
-  --color-text-neutral-150: #E4E4E4;
-  --color-text-neutral-300: #B3B3B3;
-  --color-text-neutral-400: #7C7C7C;
-  --color-text-neutral-500: #414141;
-  --color-text-neutral-900: #101010;
+  --color-text-neutral-150: #B3B3B3;
+  --color-text-neutral-300: #7C7C7C;
+  --color-text-neutral-400: #414141;
+  --color-text-neutral-500: #101010;
+  --color-text-neutral-900: #000;
   --color-view-shadow-primary: #4687bd;
   --color-view-shadow-secondary: #FF88F3;
   --color-view-shadow-neutral: #101010;

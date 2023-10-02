@@ -1,0 +1,33 @@
+.idiomButton {
+  min-width: 112px;
+  font-size: 1.15rem;
+  padding: 8px 8px 8px 8px;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--color-text-neutral-900);
+  font: var(--typography-small);
+
+  :active {
+    border: none;
+  }
+
+  option {
+    appearance: none;
+    color: var(--color-global-neutral-900) !important;
+  }
+}
+
+.selectWrapper {
+  position: relative;
+
+  &::after {
+    content: '>';
+    position: absolute;
+    top: 8px;
+    left: 92px;
+    transform: rotate(90deg);
+    z-index: -1;
+  }
+}

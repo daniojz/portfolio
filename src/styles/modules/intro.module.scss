@@ -53,8 +53,8 @@
 .circle {
   content: '';
   position: absolute;
-  top: -30vh;
-  left: 130vw;
+  top: -20vh;
+  left: 30vw;
   width: 1000px;
   height: 1000px;
   background: var(--color-circle-header);
@@ -73,6 +73,6 @@
 
 @media (min-width: 768px) {
   .circle {
-    left: 5vw;
+    left: 8vw;
   }
 }
