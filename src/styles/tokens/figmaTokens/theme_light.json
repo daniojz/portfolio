@@ -165,23 +165,23 @@
           "type": "color"
         },
         "150": {
-          "value": "{color.global.neutral.150}",
-          "type": "color"
-        },
-        "300": {
           "value": "{color.global.neutral.300}",
           "type": "color"
         },
-        "400": {
+        "300": {
           "value": "{color.global.neutral.400}",
           "type": "color"
         },
-        "500": {
+        "400": {
           "value": "{color.global.neutral.500}",
           "type": "color"
         },
-        "900": {
+        "500": {
           "value": "{color.global.neutral.900}",
+          "type": "color"
+        },
+        "900": {
+          "value": "{color.global.neutral.1000}",
           "type": "color"
         }
       }

@@ -1,8 +1,16 @@
 #home {
+  position: relative;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform-style: preserve-3d;
+  overflow: hidden;
+
+  header {
+    background: var(--color-background-general-header);
+  }
+  .main {
+    backdrop-filter: blur(16px);
+  }
 }

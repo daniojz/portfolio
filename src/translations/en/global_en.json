@@ -1,5 +1,12 @@
 {
   "header": {
-    "hello-world": "Hello World"
+    "navMenu": {
+      "option1": "Experience",
+      "option2": "Skills",
+      "option3": "Education",
+      "option4": "Certifications",
+      "option5": "Projects",
+      "option6": "Contact"
+    }
   }
 }

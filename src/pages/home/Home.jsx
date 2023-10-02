@@ -3,10 +3,12 @@ import Intro from './views/Intro'
 const Home = () => {
   return (
     <div id='home'>
-      <Intro></Intro>
-      <main id='main'>
-        <div style={{ width: '100%', height: '4000px' }}></div>
-      </main>
+      <header>
+        <Intro></Intro>
+      </header>
+      <div className='main'>
+        <section style={{ width: '100%', height: '4000px' }}></section>
+      </div>
     </div>
   )
 }
