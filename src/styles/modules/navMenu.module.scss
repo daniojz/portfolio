@@ -15,9 +15,8 @@
   transition: height 0.5s;
 
   .config {
+    margin-bottom: 64px;
     width: 100%;
-    position: absolute;
-    top: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,6 +49,14 @@
     .homeLink {
       display: none;
     }
+
+    .options {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     .navOptions {
       margin: 64px 40px;
       color: var(--color-text-neutral-900);
@@ -96,10 +103,11 @@
     transition: none;
 
     .config {
+      margin-left: 32px;
+      margin-bottom: 0;
       width: auto;
       position: static;
       column-gap: 8px;
-      margin-left: 32px;
     }
     .content {
       max-width: 1440px;
@@ -113,11 +121,15 @@
       .homeLink {
         display: block;
         color: var(--color-text-neutral-900);
-        font: var(--typography-body);
+        font: var(--typography-subtitle);
 
         :hover {
           cursor: pointer;
         }
+      }
+
+      .options {
+        flex-direction: row;
       }
 
       .navOptions {

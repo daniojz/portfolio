@@ -8,8 +8,10 @@ const Home = () => {
         <Intro></Intro>
       </header>
       <div className='main'>
-        <Experience></Experience>
-        <section style={{ width: '100%', height: '4000px' }}></section>
+        <div className='content'>
+          <Experience></Experience>
+          <section style={{ width: '100%', height: '4000px' }}></section>
+        </div>
       </div>
     </div>
   )

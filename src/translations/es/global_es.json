@@ -1,12 +1,6 @@
 {
-  "header": {
-    "navMenu": {
-      "option1": "Experiencia",
-      "option2": "Skills",
-      "option3": "Educacion",
-      "option4": "Certificaciones",
-      "option5": "Proyectos",
-      "option6": "Contacto"
-    }
+  "navMenu": {
+    "homeLinkText": "Dani.",
+    "options": ["Experiencia", "Skills", "Educación", "Certificaciones", "Proyectos", "Contacto"]
   }
 }

@@ -6,7 +6,7 @@ import LanguajeButton from '../LanguajeButton/LanguajeButton'
 import style from '@styles/modules/navMenu.module.scss'
 
 const NavMenu = () => {
-  const [t] = useTranslation('global')
+  const [t] = useTranslation('global', { keyPrefix: 'navMenu' })
   const [mobileState, setMobileState] = useState('hidden')
   const content = useRef()
   const nav = useRef()
@@ -80,34 +80,21 @@ const NavMenu = () => {
       </button>
       <div className={style.content} ref={content}>
         <a href='/' className={style.homeLink}>
-          <span>Dani.</span>
+          <span>{t(`homeLinkText`)}</span>
         </a>
-        <ul className={style.navOptions} ref={navOptions}>
-          <li>
-            <a href='#experience'>{t(`header.navMenu.option1`)}</a>
-          </li>
-          <li>
-            <a href={`#${t(`header.navMenu.option2`)}`}>{t(`header.navMenu.option2`)}</a>
-          </li>
-          <li>
-            <a href={`#${t(`header.navMenu.option3`)}`}>{t(`header.navMenu.option3`)}</a>
-          </li>
-          <li>
-            <a href={`#${t(`header.navMenu.option4`)}`}>{t(`header.navMenu.option4`)}</a>
-          </li>
-          <li>
-            <a href={`#${t(`header.navMenu.option5`)}`}>{t(`header.navMenu.option5`)}</a>
-          </li>
-          <li>
-            <a href={`#${t(`header.navMenu.option6`)}`}>{t(`header.navMenu.option6`)}</a>
-          </li>
-          <li>
-            <div className={style.config}>
-              <ThemeButton></ThemeButton>
-              <LanguajeButton></LanguajeButton>
-            </div>
-          </li>
-        </ul>
+        <div className={style.options}>
+          <ul className={style.navOptions} ref={navOptions}>
+            {t(`options`).map((option) => (
+              <li key={option}>
+                <a href={`#${option}`}>{option}</a>
+              </li>
+            ))}
+          </ul>
+          <div className={style.config}>
+            <ThemeButton></ThemeButton>
+            <LanguajeButton></LanguajeButton>
+          </div>
+        </div>
       </div>
     </nav>
   )

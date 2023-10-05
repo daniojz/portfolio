@@ -11,7 +11,13 @@
     background: var(--color-background-general-header);
   }
   .main {
-    padding: 100px 24px 24px 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     backdrop-filter: blur(16px);
+  }
+  .content {
+    max-width: 1440px;
+    padding: 100px 24px 24px 24px;
   }
 }
