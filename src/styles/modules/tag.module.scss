@@ -1,0 +1,33 @@
+.tag {
+  margin: 8px;
+  padding: 4px 10px 4px 10px;
+  color: var(--color-global-neutral-1000);
+  border-radius: 4px;
+  font: var(--typography-small);
+}
+
+.primary {
+  background-color: var(--color-background-tag-primary-normal);
+}
+.primaryClick:active {
+  background-color: var(--color-background-tag-primary-click);
+}
+.secondary {
+  background-color: var(--color-background-tag-secondary-normal);
+}
+.secondaryClick:active {
+  cursor: pointer;
+  background-color: var(--color-background-tag-secondary-click);
+}
+.neutral1 {
+  background-color: var(--color-background-tag-neutral1-normal);
+}
+.neutral1Click:active {
+  background-color: var(--color-background-tag-neutral1-click);
+}
+.neutral2 {
+  background-color: var(--color-background-tag-neutral2-normal);
+}
+.neutral2Click:active {
+  background-color: var(--color-background-tag-neutral2-click);
+}

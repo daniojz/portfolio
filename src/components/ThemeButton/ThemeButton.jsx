@@ -22,11 +22,7 @@ const ThemeButton = () => {
 
   return (
     <button title='themeButton' onClick={onClickHandler} className={style.themeButton}>
-      <Icon
-        icon={theme === 'light' ? 'akar-icons:moon-fill' : 'akar-icons:sun-fill'}
-        width={32}
-        height={32}
-      />
+      <Icon icon={theme === 'light' ? 'akar-icons:moon-fill' : 'akar-icons:sun-fill'} />
     </button>
   )
 }

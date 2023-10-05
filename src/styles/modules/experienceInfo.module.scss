@@ -1,0 +1,63 @@
+.experienceInfo {
+  padding-left: 24px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 16px;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 16px;
+    text-align: left;
+
+    .jobTitle {
+      color: var(--color-text-neutral-900);
+      font: var(--typography-subtitle);
+    }
+    .date {
+      color: var(--color-text-neutral-400);
+      font: var(--typography-small);
+    }
+    .actualWork {
+      color: var(--color-global-semantic-info);
+      font: var(--typography-small);
+    }
+  }
+
+  .description {
+    color: var(--color-text-neutral-900);
+    font: var(--typography-body);
+  }
+
+  .tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: grey;
+    height: 90%;
+    width: 2px;
+    border-radius: 8px;
+  }
+
+  &:after {
+    position: absolute;
+    top: 6px;
+    left: -8px;
+    content: '';
+    background-color: grey;
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+  }
+}

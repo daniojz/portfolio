@@ -39,7 +39,7 @@ StyleDictionary.registerTransform({
       }
     }
 
-    return `${fontWeight(token.value.fontWeight)} ${fontSize}pt${
+    return `${fontWeight(token.value.fontWeight)} ${fontSize}px${
       lineHeight !== 'AUTO' ? `/${lineHeight}` : ''
     } ${fontFamily}`
   },

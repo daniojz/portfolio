@@ -6,7 +6,7 @@ import FollowMe from '@components/FollowMe/FollowMe'
 import { Parallax } from 'react-scroll-parallax'
 
 const Intro = () => {
-  const [t, i18n] = useTranslation('home')
+  const [t] = useTranslation('home', { keyPrefix: 'intro' })
 
   return (
     <div className={style.introContainer}>
@@ -30,12 +30,13 @@ const Intro = () => {
         <FollowMe styles={style.links}></FollowMe>
 
         <div className={style.description}>
-          <p>{t('intro.introDescription')}</p>
+          <p>{t('introDescription')}</p>
         </div>
+
+        <a href='#main' className={style.anchorLink}>
+          <Icon icon='akar-icons:chevron-down' width='24' height='24' />
+        </a>
       </div>
-      <a href='#main' className={style.anchorLink}>
-        <Icon icon='akar-icons:chevron-down' width='24' height='24' />
-      </a>
     </div>
   )
 }

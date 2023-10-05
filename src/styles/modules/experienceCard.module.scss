@@ -1,0 +1,36 @@
+.experienceCard {
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-background-container-transparent050-normal);
+  border-radius: 16px;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-text-neutral-900);
+    font: var(--typography-title4);
+
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .experienceCard {
+    max-width: 400px;
+    row-gap: 32px;
+  }
+}

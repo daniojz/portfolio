@@ -1,56 +1,88 @@
 import { Icon } from '@iconify/react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import ThemeButton from '../../components/ThemeButton/ThemeButton'
 import LanguajeButton from '../LanguajeButton/LanguajeButton'
-import PropTypes from 'prop-types'
 import style from '@styles/modules/navMenu.module.scss'
 
-const NavMenu = ({ styles, iconSize }) => {
-  const [t, i18n] = useTranslation('global')
-  const [mobileState, setMobileState] = useState('show')
+const NavMenu = () => {
+  const [t] = useTranslation('global')
+  const [mobileState, setMobileState] = useState('hidden')
+  const content = useRef()
+  const nav = useRef()
+  const navOptions = useRef()
+
+  const addStyles = () => {
+    const options = [...navOptions.current.children]
+    let seconds = 0
+
+    for (let i = 0; i < options.length; i++) {
+      const option = options[i]
+      seconds = seconds + 0.05
+      option.style.transitionDelay = seconds + 0.05 + 's'
+    }
+  }
 
   const onClickHandler = () => {
-    const content = document.getElementsByClassName(`${style.content}`)[0]
-    const nav = document.getElementsByClassName(`${style.navMenu}`)[0]
-    const navOptions = [...document.getElementsByClassName(`${style.navOptions}`)[0].children]
+    const options = [...navOptions.current.children]
 
-    if (mobileState === 'show') {
-      setMobileState('hidden')
-
-      content.classList.add(`${style.isContentShow}`)
-      nav.classList.add(`${style.isNavOpen}`)
-      navOptions.forEach((option) => option.classList.add(`${style.isNavOptionShow}`))
-    } else {
+    if (mobileState === 'hidden') {
       setMobileState('show')
 
-      content.classList.remove(`${style.isContentShow}`)
-      nav.classList.remove(`${style.isNavOpen}`)
-      navOptions.forEach((option) => option.classList.remove(`${style.isNavOptionShow}`))
+      content.current.classList.add(`${style.isContentShow}`)
+      nav.current.classList.add(`${style.isNavOpen}`)
+      options.forEach((option) => option.classList.add(`${style.isNavOptionShow}`))
+    } else {
+      setMobileState('hidden')
+
+      content.current.classList.remove(`${style.isContentShow}`)
+      nav.current.classList.remove(`${style.isNavOpen}`)
+      options.forEach((option) => option.classList.remove(`${style.isNavOptionShow}`))
     }
   }
 
   useEffect(() => {
-    const navOptions = [...document.getElementsByClassName(`${style.navOptions}`)[0].children]
-    for (let i = 0; i < navOptions.length; i++) {
-      const option = navOptions[i]
-      option.style.transitionDelay = '0.' + i + 's'
+    addStyles()
+
+    const handleResize = (event) => {
+      const screenWith = window.screen.width
+      const options = [...navOptions.current.children]
+
+      if (screenWith >= 992 && mobileState === 'hidden') {
+        setMobileState('hidden')
+        nav.current.classList.remove(`${style.isNavOpen}`)
+        options.forEach((option) => option.classList.remove(`${style.isNavOptionShow}`))
+      }
+      if (screenWith < 992) {
+        nav.current.classList.add(`${style.resizeAnimationStopper}`)
+        setTimeout(() => {
+          nav.current.classList.remove(`${style.resizeAnimationStopper}`)
+        }, 400)
+      }
+    }
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.addEventListener('resize', handleResize)
     }
   }, [])
 
   return (
-    <nav className={style.navMenu}>
+    <nav className={style.navMenu} ref={nav}>
       <button onClick={onClickHandler} className={style.hamburgerButton}>
         <Icon
           icon={`akar-icons:${
-            mobileState === 'show' ? 'two-line-horizontal' : 'two-line-vertical'
+            mobileState === 'show' ? 'two-line-vertical' : 'two-line-horizontal'
           }`}
           width={40}
           height={40}
         />
       </button>
-      <div className={style.content}>
-        <ul className={style.navOptions}>
+      <div className={style.content} ref={content}>
+        <a href='/' className={style.homeLink}>
+          <span>Dani.</span>
+        </a>
+        <ul className={style.navOptions} ref={navOptions}>
           <li>
             <a href='#experience'>{t(`header.navMenu.option1`)}</a>
           </li>
@@ -69,23 +101,16 @@ const NavMenu = ({ styles, iconSize }) => {
           <li>
             <a href={`#${t(`header.navMenu.option6`)}`}>{t(`header.navMenu.option6`)}</a>
           </li>
+          <li>
+            <div className={style.config}>
+              <ThemeButton></ThemeButton>
+              <LanguajeButton></LanguajeButton>
+            </div>
+          </li>
         </ul>
-        <div className={style.config}>
-          <ThemeButton></ThemeButton>
-          <LanguajeButton></LanguajeButton>
-        </div>
       </div>
     </nav>
   )
-}
-
-NavMenu.propTypes = {
-  styles: PropTypes.string,
-  iconSize: PropTypes.number,
-}
-
-NavMenu.defaultProps = {
-  iconSize: 32,
 }
 
 export default NavMenu

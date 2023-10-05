@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 80px;
+  height: 8vh;
   padding: 16px 32px 0px 32px;
   display: flex;
   justify-content: right;
@@ -17,7 +17,7 @@
   .config {
     width: 100%;
     position: absolute;
-    top: 80vh;
+    top: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,10 +47,13 @@
     top: -100vh;
     transition: top 0.8s ease;
 
+    .homeLink {
+      display: none;
+    }
     .navOptions {
       margin: 64px 40px;
       color: var(--color-text-neutral-900);
-      font: var(--typography-subtitle);
+      font: var(--typography-title4);
 
       li {
         margin: 16px 0 16px 0px;
@@ -87,11 +90,66 @@
   height: 100vh !important;
 }
 
-@media (min-width: 768px) {
-  .config {
-    width: auto;
-    position: absolute;
-    top: 95vh;
-    right: 48px;
+@media (min-width: 992px) {
+  .navMenu {
+    padding: 8px 72px 0px 72px;
+    transition: none;
+
+    .config {
+      width: auto;
+      position: static;
+      column-gap: 8px;
+      margin-left: 32px;
+    }
+    .content {
+      max-width: 1440px;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      transition: none;
+
+      .homeLink {
+        display: block;
+        color: var(--color-text-neutral-900);
+        font: var(--typography-body);
+
+        :hover {
+          cursor: pointer;
+        }
+      }
+
+      .navOptions {
+        margin: 0;
+        display: flex;
+        column-gap: 1.5em;
+        font: var(--typography-small);
+        transition: none;
+
+        li {
+          position: static;
+          opacity: 100;
+          transition: none;
+          display: flex;
+          align-items: center;
+
+          a {
+            &:hover {
+              position: static;
+              transition: none;
+            }
+          }
+        }
+      }
+    }
   }
+  .hamburgerButton {
+    display: none;
+  }
+}
+
+.resizeAnimationStopper * {
+  animation: none !important;
+  transition: none !important;
 }

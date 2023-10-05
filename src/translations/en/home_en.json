@@ -1,5 +1,132 @@
 {
   "intro": {
     "introDescription": "Dani, desarrollador web junior y amante de la creatividad"
+  },
+  "experience": {
+    "experienceCards": [
+      {
+        "id": "1",
+        "companyName": "Telefonica",
+        "companyIcon": "/imagenes/telefonica-logo.png",
+        "experienceInfos": [
+          {
+            "id": "1",
+            "jobTitle": "Telefonica",
+            "startDate": "jul. 2022",
+            "finishDate": "jun. 2023",
+            "actualWork": false,
+            "description": "Lorem ipsum dolor sit amet consectetur. Tincidunt tristique ac duis ullamcorper elit egestas cursus. Ipsum diam bibendum suspendisse quis tempor facilisis. In diam nunc mauris vivamus dis aliquet lorem leo blandit. Duis ipsum enim dui netus ac vestibulum et faucibus quis.",
+            "aptitudes": [
+              "HTML",
+              "CSS",
+              "React",
+              "Redux",
+              "JavaScript",
+              "Aprendizaje Continuo",
+              "Redux Saga"
+            ]
+          },
+          {
+            "id": "2",
+            "jobTitle": "Telefonica",
+            "startDate": "jul. 2022",
+            "finishDate": "jun. 2023",
+            "actualWork": false,
+            "description": "Lorem ipsum dolor sit amet consectetur. Tincidunt tristique ac duis ullamcorper elit egestas cursus. Ipsum diam bibendum suspendisse quis tempor facilisis. In diam nunc mauris vivamus dis aliquet lorem leo blandit. Duis ipsum enim dui netus ac vestibulum et faucibus quis.",
+            "aptitudes": [
+              "HTML",
+              "CSS",
+              "React",
+              "Redux",
+              "JavaScript",
+              "Aprendizaje Continuo",
+              "Redux Saga"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "companyName": "Grupo TRC",
+        "companyIcon": "/imagenes/grupoTRC-logo.png",
+        "experienceInfos": [
+          {
+            "id": "1",
+            "jobTitle": "Telefonica",
+            "startDate": "jul. 2022",
+            "finishDate": "jun. 2023",
+            "actualWork": false,
+            "description": "Lorem ipsum dolor sit amet consectetur. Tincidunt tristique ac duis ullamcorper elit egestas cursus. Ipsum diam bibendum suspendisse quis tempor facilisis. In diam nunc mauris vivamus dis aliquet lorem leo blandit. Duis ipsum enim dui netus ac vestibulum et faucibus quis.",
+            "aptitudes": [
+              "HTML",
+              "CSS",
+              "React",
+              "Redux",
+              "JavaScript",
+              "Aprendizaje Continuo",
+              "Redux Saga"
+            ]
+          },
+          {
+            "id": "2",
+            "jobTitle": "Telefonica",
+            "startDate": "jul. 2022",
+            "finishDate": "jun. 2023",
+            "actualWork": false,
+            "description": "Lorem ipsum dolor sit amet consectetur. Tincidunt tristique ac duis ullamcorper elit egestas cursus. Ipsum diam bibendum suspendisse quis tempor facilisis. In diam nunc mauris vivamus dis aliquet lorem leo blandit. Duis ipsum enim dui netus ac vestibulum et faucibus quis.",
+            "aptitudes": [
+              "HTML",
+              "CSS",
+              "React",
+              "Redux",
+              "JavaScript",
+              "Aprendizaje Continuo",
+              "Redux Saga"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "companyName": "Sescam",
+        "companyIcon": "/imagenes/sescam-logo.png",
+        "experienceInfos": [
+          {
+            "id": "1",
+            "jobTitle": "Telefonica",
+            "startDate": "jul. 2022",
+            "finishDate": "jun. 2023",
+            "actualWork": false,
+            "description": "Lorem ipsum dolor sit amet consectetur. Tincidunt tristique ac duis ullamcorper elit egestas cursus. Ipsum diam bibendum suspendisse quis tempor facilisis. In diam nunc mauris vivamus dis aliquet lorem leo blandit. Duis ipsum enim dui netus ac vestibulum et faucibus quis.",
+            "aptitudes": [
+              "HTML",
+              "CSS",
+              "React",
+              "Redux",
+              "JavaScript",
+              "Aprendizaje Continuo",
+              "Redux Saga"
+            ]
+          },
+          {
+            "id": "2",
+            "jobTitle": "Telefonica",
+            "startDate": "jul. 2022",
+            "finishDate": "jun. 2023",
+            "actualWork": false,
+            "description": "Lorem ipsum dolor sit amet consectetur. Tincidunt tristique ac duis ullamcorper elit egestas cursus. Ipsum diam bibendum suspendisse quis tempor facilisis. In diam nunc mauris vivamus dis aliquet lorem leo blandit. Duis ipsum enim dui netus ac vestibulum et faucibus quis.",
+            "aptitudes": [
+              "HTML",
+              "CSS",
+              "React",
+              "Redux",
+              "JavaScript",
+              "Aprendizaje Continuo",
+              "Redux Saga"
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

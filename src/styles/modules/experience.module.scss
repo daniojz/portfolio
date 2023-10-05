@@ -1,0 +1,19 @@
+.experienceContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 32px;
+
+  .header {
+    width: 100%;
+    text-align: right;
+    color: var(--color-text-neutral-900);
+    font: var(--typography-title3);
+  }
+}
+
+@media (min-width: 992px) {
+}
