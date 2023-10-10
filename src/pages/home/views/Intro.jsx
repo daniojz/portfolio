@@ -33,7 +33,7 @@ const Intro = () => {
           <p>{t('introDescription')}</p>
         </div>
 
-        <a href='#main' className={style.anchorLink}>
+        <a href='#Experience' className={style.anchorLink}>
           <Icon icon='akar-icons:chevron-down' width='24' height='24' />
         </a>
       </div>

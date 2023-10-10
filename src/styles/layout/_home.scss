@@ -19,5 +19,8 @@
   .content {
     max-width: 1440px;
     padding: 100px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 56px;
   }
 }

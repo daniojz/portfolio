@@ -1,5 +1,6 @@
 import Experience from './views/Experience'
 import Intro from './views/Intro'
+import Skills from './views/Skills'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <div className='main'>
         <div className='content'>
           <Experience></Experience>
+          <Skills></Skills>
           <section style={{ width: '100%', height: '4000px' }}></section>
         </div>
       </div>

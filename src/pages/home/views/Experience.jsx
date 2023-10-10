@@ -6,7 +6,7 @@ const Experience = () => {
   const [t] = useTranslation('home', { keyPrefix: 'experience' })
 
   return (
-    <section className={style.experienceContainer}>
+    <section id='Experience' className={style.experienceContainer}>
       <div className={style.header}>
         <h2>Experience</h2>
       </div>
