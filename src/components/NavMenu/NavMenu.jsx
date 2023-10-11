@@ -23,7 +23,7 @@ const NavMenu = () => {
     }
   }
 
-  const onClickHandler = () => {
+  const onClickHamburguerHandler = () => {
     const options = [...navOptions.current.children]
 
     if (mobileState === 'hidden') {
@@ -33,6 +33,18 @@ const NavMenu = () => {
       nav.current.classList.add(`${style.isNavOpen}`)
       options.forEach((option) => option.classList.add(`${style.isNavOptionShow}`))
     } else {
+      setMobileState('hidden')
+
+      content.current.classList.remove(`${style.isContentShow}`)
+      nav.current.classList.remove(`${style.isNavOpen}`)
+      options.forEach((option) => option.classList.remove(`${style.isNavOptionShow}`))
+    }
+  }
+
+  const onClickOptionHandler = () => {
+    const options = [...navOptions.current.children]
+
+    if (mobileState !== 'hidden') {
       setMobileState('hidden')
 
       content.current.classList.remove(`${style.isContentShow}`)
@@ -69,7 +81,7 @@ const NavMenu = () => {
 
   return (
     <nav className={style.navMenu} ref={nav}>
-      <button onClick={onClickHandler} className={style.hamburgerButton}>
+      <button onClick={onClickHamburguerHandler} className={style.hamburgerButton}>
         <Icon
           icon={`akar-icons:${
             mobileState === 'show' ? 'two-line-vertical' : 'two-line-horizontal'
@@ -85,8 +97,8 @@ const NavMenu = () => {
         <div className={style.options}>
           <ul className={style.navOptions} ref={navOptions}>
             {t(`options`).map((option) => (
-              <li key={option}>
-                <a href={`#${option}`}>{option}</a>
+              <li key={option.name} onClick={onClickOptionHandler}>
+                <a href={`#${option.anchor}`}>{option.name}</a>
               </li>
             ))}
           </ul>

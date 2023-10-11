@@ -1,6 +1,31 @@
 {
   "navMenu": {
     "homeLinkText": "Dani.",
-    "options": ["Experience", "Skills", "Education", "Certifications", "Projects", "Contact"]
+    "options": [
+      {
+        "anchor": "Experience",
+        "name": "Experience"
+      },
+      {
+        "anchor": "Skills",
+        "name": "Skills"
+      },
+      {
+        "anchor": "Education",
+        "name": "Education"
+      },
+      {
+        "anchor": "Certifications",
+        "name": "Certifications"
+      },
+      {
+        "anchor": "Proyects",
+        "name": "Proyects"
+      },
+      {
+        "anchor": "Contact",
+        "name": "Contact"
+      }
+    ]
   }
 }
