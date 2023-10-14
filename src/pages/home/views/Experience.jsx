@@ -6,13 +6,17 @@ const Experience = () => {
   const [t] = useTranslation('home', { keyPrefix: 'experience' })
 
   return (
-    <section id='Experience' className={style.experienceContainer}>
-      <div className={style.header}>
-        <h2>Experience</h2>
+    <section id='Experience'>
+      <div className={style.experienceContainer}>
+        <div className={style.header}>
+          <h2>Experience</h2>
+        </div>
+        <div className={style.content}>
+          {t('experienceCards').map((card) => (
+            <ExperienceCard key={card.id} experienceCard={card}></ExperienceCard>
+          ))}
+        </div>
       </div>
-      {t('experienceCards').map((card) => (
-        <ExperienceCard key={card.id} experienceCard={card}></ExperienceCard>
-      ))}
     </section>
   )
 }
