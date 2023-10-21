@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import style from '@styles/modules/experienceCard.module.scss'
+import style from '@componentsStyles/experienceCard.module.scss'
 import ExperienceInfo from '../ExperieceInfo/ExperieceInfo'
 
 const ExperienceCard = ({ experienceCard }) => {

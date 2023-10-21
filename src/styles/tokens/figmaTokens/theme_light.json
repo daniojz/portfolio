@@ -184,6 +184,12 @@
           "value": "{color.global.neutral.1000}",
           "type": "color"
         }
+      },
+      "special": {
+        "principle": {
+          "value": "{color.global.neutral.900}40",
+          "type": "color"
+        }
       }
     },
     "viewShadow": {

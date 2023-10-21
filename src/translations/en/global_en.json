@@ -1,4 +1,16 @@
 {
+  "global": {
+    "titles": {
+      "experience": "Experience",
+      "skills": "Skills",
+      "education": "Education",
+      "programmingConcepts": "Programming Concpets",
+      "coursesCertifications": "Courses and Certifications",
+      "certifications": "Certifications",
+      "proyects": "Proyects",
+      "contact": "Contact"
+    }
+  },
   "navMenu": {
     "homeLinkText": "Dani.",
     "options": [

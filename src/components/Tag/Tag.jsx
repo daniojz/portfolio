@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import style from '@styles/modules/tag.module.scss'
+import style from '@componentsStyles/tag.module.scss'
 
 const Tag = ({ text, type, clickable }) => {
   const typeStyle = () => {

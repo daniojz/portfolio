@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react'
 import { useTranslation } from 'react-i18next'
 import Atropos from 'atropos/react'
-import style from '@styles/modules/intro.module.scss'
+import style from '@sectionsStyles/intro.module.scss'
 import FollowMe from '@components/FollowMe/FollowMe'
 import { Parallax } from 'react-scroll-parallax'
 

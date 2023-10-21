@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import ThemeButton from '../../components/ThemeButton/ThemeButton'
 import LanguajeButton from '../LanguajeButton/LanguajeButton'
-import style from '@styles/modules/navMenu.module.scss'
+import style from '@componentsStyles/navMenu.module.scss'
 
 const NavMenu = () => {
   const [t] = useTranslation('global', { keyPrefix: 'navMenu' })

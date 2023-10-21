@@ -1,0 +1,75 @@
+.principles {
+  margin-top: 218px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 80px;
+  column-gap: 40px;
+  font: var(--typography-title3);
+  color: var(--color-text-neutral-900);
+
+  .principle {
+    max-width: 352px;
+
+    p {
+      text-align: center;
+    }
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        background: #3d3a00
+          linear-gradient(to right, #3d3a00 0%, #fff 50%, #3d3a00 100%)
+          0
+          0
+          no-repeat;
+        -webkit-background-size: 125px;
+        color: var(--color-text-special-principle);
+        -webkit-background-clip: text;
+        -webkit-animation-name: shine;
+        /* prettier-ignore */
+        -webkit-animation-duration: (($i)+s);
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .principles {
+    flex-direction: row;
+    .principle {
+      flex-basis: 30%;
+
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          background: var(--color-text-neutral-900)
+            linear-gradient(to right, #726f006d 0%, #fff 50%, #726f006d 100%)
+            0
+            0
+            no-repeat;
+          -webkit-background-size: 125px;
+          color: var(--color-text-special-principle);
+          -webkit-background-clip: text;
+          -webkit-animation-name: shine;
+          /* prettier-ignore */
+          -webkit-animation-duration: (2+($i)+s);
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-direction: alternate;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes shine {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}

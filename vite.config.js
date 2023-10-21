@@ -12,6 +12,14 @@ export default defineConfig({
         replacement: resolve(__dirname, './src/styles/'),
       },
       {
+        find: '@sectionsStyles',
+        replacement: resolve(__dirname, './src/styles/modules/sections'),
+      },
+      {
+        find: '@componentsStyles',
+        replacement: resolve(__dirname, './src/styles/modules/components'),
+      },
+      {
         find: '@components',
         replacement: resolve(__dirname, './src/components/'),
       },

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import style from '@styles/modules/experience.module.scss'
+import style from '@sectionsStyles/experience.module.scss'
 import ExperienceCard from '../../../components/ExperienceCard/ExperienceCard'
 
 const Experience = () => {

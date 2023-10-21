@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react'
-import style from '@styles/modules/themeButton.module.scss'
+import style from '@componentsStyles/themeButton.module.scss'
 import { useEffect, useState } from 'react'
 
 const ThemeButton = () => {

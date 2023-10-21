@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react'
 import PropTypes from 'prop-types'
-import style from '@styles/modules/followMe.module.scss'
+import style from '@componentsStyles/followMe.module.scss'
 
 const FollowMe = ({ styles, iconSize }) => {
   return (

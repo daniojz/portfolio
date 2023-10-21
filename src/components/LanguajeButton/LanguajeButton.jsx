@@ -1,10 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
-import style from '@styles/modules/idiomButton.module.scss'
-import { Icon } from '@iconify/react'
+import style from '@componentsStyles/idiomButton.module.scss'
 
 const LanguajeButton = () => {
-  const { t, i18n } = useTranslation()
+  const { i18n } = useTranslation()
   const [selectedIdiom, setSelectedIdiom] = useState(i18n.language)
 
   const onChangeHandler = (e) => {

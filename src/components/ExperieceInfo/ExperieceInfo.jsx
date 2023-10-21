@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import style from '@styles/modules/experienceInfo.module.scss'
+import style from '@componentsStyles/experienceInfo.module.scss'
 import Tag from '../Tag/Tag'
 
 const ExperienceInfo = ({
