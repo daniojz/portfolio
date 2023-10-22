@@ -111,5 +111,76 @@
         ]
       }
     ]
+  },
+  "skills": {
+    "principles": {
+      "creativity": "Creativity",
+      "humilty": "Humilty",
+      "continousLearning": "Continuous improvement and learning",
+      "teamWork": "Team Work",
+      "clientOrientation": "Client Orientation"
+    }
+  },
+  "education": {
+    "averageGrade": "Average Grade",
+    "titulationCards": [
+      {
+        "id": "1",
+        "title": "DAW",
+        "description": "Web Aplications Development",
+        "collegeName": "Unir",
+        "collegeIcon": "/imagenes/unirLogo.png",
+        "averageGrade": "8,5",
+        "date": "20/10/2001",
+        "city": "Madrid",
+        "aptitudes": [
+          "HTML",
+          "CSS",
+          "React",
+          "Redux",
+          "JavaScript",
+          "Aprendizaje Continuo",
+          "Redux Saga"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "DAM",
+        "description": "Multiplatform Aplications Development",
+        "collegeName": "IES Azarquiel",
+        "collegeIcon": "/imagenes/iesAzarquielLogo.png",
+        "averageGrade": "8,5",
+        "date": "20/10/2001",
+        "city": "Madrid",
+        "aptitudes": [
+          "HTML",
+          "CSS",
+          "React",
+          "Redux",
+          "JavaScript",
+          "Aprendizaje Continuo",
+          "Redux Saga"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "SMR",
+        "description": "Multiplatform Aplications Development",
+        "collegeName": "IES Azarquiel",
+        "collegeIcon": "/imagenes/iesAzarquielLogo.png",
+        "averageGrade": "8,5",
+        "date": "20/10/2001",
+        "city": "Madrid",
+        "aptitudes": [
+          "HTML",
+          "CSS",
+          "React",
+          "Redux",
+          "JavaScript",
+          "Aprendizaje Continuo",
+          "Redux Saga"
+        ]
+      }
+    ]
   }
 }

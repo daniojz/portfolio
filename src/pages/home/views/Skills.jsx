@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next'
 import style from '@sectionsStyles/skills.module.scss'
 import TechSkills from '../../../components/TechSkills/TechSkills'
 import Principles from '../../../components/Principles/Principles'
+import { Parallax } from 'react-scroll-parallax'
+import ArrowButton from '../../../components/ArrowButton/ArrowButton'
 
 const Skills = () => {
   const [t] = useTranslation('global', { keyPrefix: 'global.titles' })
@@ -12,8 +14,11 @@ const Skills = () => {
         <h2>{t(`skills`)}</h2>
       </div>
       <TechSkills></TechSkills>
+      <ArrowButton className={style.button}></ArrowButton>
       <Principles></Principles>
-      <div className={style.circle}></div>
+      <Parallax translateY={['-250px', '0px']}>
+        <div className={style.circle}></div>
+      </Parallax>
     </section>
   )
 }

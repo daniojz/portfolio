@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import style from '@componentsStyles/experienceInfo.module.scss'
-import Tag from '../Tag/Tag'
+import TagsContainer from '../TagsContainer/TagsContainer'
 
 const ExperienceInfo = ({
   jobTitle,
@@ -22,11 +22,7 @@ const ExperienceInfo = ({
       <div className={style.description}>
         <p>{description}</p>
       </div>
-      <div className={style.tagsContainer}>
-        {aptitudes.map((aptitude) => (
-          <Tag key={aptitude} text={aptitude}></Tag>
-        ))}
-      </div>
+      <TagsContainer aptitudes={aptitudes}></TagsContainer>
     </div>
   )
 }

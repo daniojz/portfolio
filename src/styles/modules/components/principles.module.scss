@@ -1,4 +1,5 @@
 .principles {
+  position: relative;
   margin-top: 218px;
   width: 100%;
   height: fit-content;
@@ -11,6 +12,7 @@
   column-gap: 40px;
   font: var(--typography-title3);
   color: var(--color-text-neutral-900);
+  z-index: 0;
 
   .principle {
     max-width: 352px;
@@ -21,8 +23,8 @@
 
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
-        background: #3d3a00
-          linear-gradient(to right, #3d3a00 0%, #fff 50%, #3d3a00 100%)
+        background: var(--color-text-neutral-900)
+          linear-gradient(to right, #726f006d 0%, #fff 50%, #726f006d 100%)
           0
           0
           no-repeat;
@@ -41,6 +43,8 @@
 @media (min-width: 992px) {
   .principles {
     flex-direction: row;
+    z-index: 0;
+
     .principle {
       flex-basis: 30%;
 
@@ -62,6 +66,12 @@
         }
       }
     }
+  }
+}
+@media (max-width: 768px) {
+  .principles {
+    flex-direction: row;
+    z-index: 1000000;
   }
 }
 

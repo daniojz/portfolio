@@ -4,12 +4,13 @@ import ExperienceCard from '../../../components/ExperienceCard/ExperienceCard'
 
 const Experience = () => {
   const [t] = useTranslation('home', { keyPrefix: 'experience' })
+  const [global] = useTranslation('global', { keyPrefix: 'global.titles' })
 
   return (
     <section id='Experience'>
       <div className={style.experienceContainer}>
         <div className={style.header}>
-          <h2>Experience</h2>
+          <h2>{global('experience')}</h2>
         </div>
         <div className={style.content}>
           {t('experienceCards').map((card) => (

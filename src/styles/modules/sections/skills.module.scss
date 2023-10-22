@@ -14,11 +14,16 @@
     font: var(--typography-title3);
   }
 
+  .button {
+    position: absolute;
+    right: 204px;
+    top: 204px;
+  }
+
   .circle {
     content: '';
     position: absolute;
-    top: 500px;
-    left: -600px;
+    left: -128vw;
     width: 900px;
     height: 900px;
     background: var(--color-circle-values);
@@ -33,8 +38,7 @@
     .circle {
       content: '';
       position: absolute;
-      top: 600px;
-      left: -45vw;
+      left: -80vw;
       width: 1000px;
       height: 1000px;
       background: var(--color-circle-values);

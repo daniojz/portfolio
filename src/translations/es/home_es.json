@@ -3,6 +3,7 @@
     "introDescription": "Dani, desarrollador web junior y amante de la creatividad"
   },
   "experience": {
+    "titleSection": "Experiencia",
     "experienceCards": [
       {
         "id": "1",
@@ -108,6 +109,80 @@
               "Redux Saga"
             ]
           }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "titleSection": "Skills",
+    "principles": {
+      "creativity": "Creativdad",
+      "humilty": "Humildad",
+      "continousLearning": "Mejora y aprendizaje continuo",
+      "teamWork": "Trabajo en equipo",
+      "clientOrientation": "Orientación al cliente"
+    }
+  },
+  "education": {
+    "titleSection": "Educacion",
+    "averageGrade": "Nota Media",
+    "seeCertifications": "see my courses and certifications",
+    "titulationCards": [
+      {
+        "id": "1",
+        "title": "DAW",
+        "description": "Grado Superior en Desarollo de Aplicaciones Web",
+        "collegeName": "Unir",
+        "collegeIcon": "/imagenes/unirLogo.png",
+        "averageGrade": "8,5",
+        "date": "20/10/2001",
+        "city": "Madrid",
+        "aptitudes": [
+          "HTML",
+          "CSS",
+          "React",
+          "Redux",
+          "JavaScript",
+          "Aprendizaje Continuo",
+          "Redux Saga"
+        ]
+      },
+      {
+        "id": "2",
+        "title": "DAM",
+        "description": "Grado Superior en Desarrollo de aplicaciones Multiplataforma",
+        "collegeName": "IES Azarquiel",
+        "collegeIcon": "/imagenes/iesAzarquielLogo.png",
+        "averageGrade": "8,5",
+        "date": "20/10/2001",
+        "city": "Madrid",
+        "aptitudes": [
+          "HTML",
+          "CSS",
+          "React",
+          "Redux",
+          "JavaScript",
+          "Aprendizaje Continuo",
+          "Redux Saga"
+        ]
+      },
+      {
+        "id": "3",
+        "title": "SMR",
+        "description": "Grado Medio en Sistemas Micro Informaticos y Redes",
+        "collegeName": "IES Azarquiel",
+        "collegeIcon": "/imagenes/iesAzarquielLogo.png",
+        "averageGrade": "8,5",
+        "date": "20/10/2001",
+        "city": "Madrid",
+        "aptitudes": [
+          "HTML",
+          "CSS",
+          "React",
+          "Redux",
+          "JavaScript",
+          "Aprendizaje Continuo",
+          "Redux Saga"
         ]
       }
     ]

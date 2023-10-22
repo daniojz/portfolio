@@ -34,11 +34,6 @@
     font: var(--typography-body);
   }
 
-  .tagsContainer {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   &:before {
     content: '';
     position: absolute;

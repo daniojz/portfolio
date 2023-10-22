@@ -1,0 +1,53 @@
+.titulationCard {
+  max-width: 320px;
+  min-height: 360px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 8px;
+  background-color: var(--color-background-container-neutral1-normal);
+  border-radius: var(--border-radius-small);
+
+  .title {
+    width: 100%;
+    font: var(--typography-title2);
+    color: var(--color-text-neutral-900);
+  }
+
+  .description {
+    width: 100%;
+    font: var(--typography-subtitle);
+    color: var(--color-text-neutral-500);
+  }
+
+  .collegeName {
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    column-gap: 4px;
+    font: var(--typography-body);
+    color: var(--color-text-neutral-300);
+
+    img {
+      width: fit-content;
+    }
+  }
+
+  .averageGrade {
+    margin-bottom: 8px;
+    font: var(--typography-small);
+    color: var(--color-text-neutral-400);
+  }
+
+  .dateAndPlace {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    font: var(--typography-super-small);
+    color: var(--color-text-neutral-400);
+  }
+}
