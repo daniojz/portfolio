@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import style from '@componentsStyles/experienceInfo.module.scss'
-import TagsContainer from '../TagsContainer/TagsContainer'
+import PillsContainer from '../PillsContainer/PillsContainer'
 
 const ExperienceInfo = ({
   jobTitle,
@@ -22,7 +22,7 @@ const ExperienceInfo = ({
       <div className={style.description}>
         <p>{description}</p>
       </div>
-      <TagsContainer aptitudes={aptitudes}></TagsContainer>
+      <PillsContainer pillsList={aptitudes}></PillsContainer>
     </div>
   )
 }

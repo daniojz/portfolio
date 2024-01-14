@@ -2,6 +2,7 @@ import Education from './views/Education'
 import Experience from './views/Experience'
 import Intro from './views/Intro'
 import Skills from './views/Skills'
+import Proyects from './views/Projects'
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
           <Experience></Experience>
           <Skills></Skills>
           <Education></Education>
-          <section style={{ width: '100%', height: '4000px' }}></section>
+          <Proyects></Proyects>
         </div>
       </div>
     </div>

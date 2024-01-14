@@ -7,9 +7,10 @@
   align-items: center;
   background-color: var(--color-global-neutral-50);
   border-radius: var(--border-radius-circle);
+  transition: transform 0.13s;
 
-  svg {
-    position: relative;
-    left: 1px;
+  &:hover {
+    transform: scale(0.9);
+    cursor: pointer;
   }
 }

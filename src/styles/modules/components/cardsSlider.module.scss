@@ -1,0 +1,40 @@
+.cardSliderContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .cardsSlider {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    align-items: center;
+    column-gap: 4%;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    #card-1 {
+      margin-left: 4%;
+    }
+    #card-2 {
+      margin-right: 4%;
+    }
+  }
+
+  .buttonRight {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  .buttonLeft {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+}

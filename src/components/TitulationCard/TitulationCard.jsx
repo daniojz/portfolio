@@ -1,7 +1,7 @@
 import style from '@componentsStyles/titulationCard.module.scss'
 import { useTranslation } from 'react-i18next'
 import PropTypes from 'prop-types'
-import TagsContainer from '../TagsContainer/TagsContainer'
+import PillsContainer from '../PillsContainer/PillsContainer'
 
 const TitulationCard = ({ titulationCard }) => {
   const [t] = useTranslation('home', { keyPrefix: 'education' })
@@ -20,7 +20,7 @@ const TitulationCard = ({ titulationCard }) => {
         <p className={style.averageGrade}>
           {t('averageGrade') + ': ' + titulationCard.averageGrade}
         </p>
-        <TagsContainer aptitudes={titulationCard.aptitudes}></TagsContainer>
+        <PillsContainer pillsList={titulationCard.aptitudes}></PillsContainer>
         <div className={style.dateAndPlace}>
           <span>{titulationCard.date}</span>
           <span>{titulationCard.city}</span>
