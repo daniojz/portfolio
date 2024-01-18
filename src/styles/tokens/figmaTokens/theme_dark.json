@@ -8,11 +8,11 @@
             "type": "color"
           },
           "hover": {
-            "value": "{color.global.neutral.500}",
+            "value": "#4d4d4d",
             "type": "color"
           },
           "click": {
-            "value": "{color.global.neutral.500}",
+            "value": "#747474",
             "type": "color"
           }
         },
@@ -22,11 +22,11 @@
             "type": "color"
           },
           "hover": {
-            "value": "{color.global.neutral.500}80",
+            "value": "#4d4d4d80",
             "type": "color"
           },
           "click": {
-            "value": "{color.global.neutral.500}80",
+            "value": "#74747480",
             "type": "color"
           }
         },
@@ -36,11 +36,11 @@
             "type": "color"
           },
           "hover": {
-            "value": "{color.global.neutral.500}40",
+            "value": "#4d4d4d40",
             "type": "color"
           },
           "click": {
-            "value": "{color.global.neutral.500}40",
+            "value": "#74747440",
             "type": "color"
           }
         }

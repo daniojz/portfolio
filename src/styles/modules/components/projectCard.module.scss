@@ -1,0 +1,42 @@
+.projectCard {
+  max-width: 30%;
+  height: min-content;
+  border-radius: 16px;
+  background-color: var(--color-background-container-transparent050-normal);
+  cursor: pointer;
+  scroll-snap-align: center;
+  flex: 0 0 600px;
+
+  &:hover {
+    background-color: var(--color-background-container-transparent050-hover);
+  }
+  &:active {
+    background-color: var(--color-background-container-transparent050-click);
+  }
+
+  .image {
+    width: 100%;
+    height: 200px;
+    border-radius: 16px 16px 0 0;
+    background-size: cover;
+  }
+
+  .content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    row-gap: 10px;
+
+    .title {
+      font: var(--typography-title4);
+      color: var(--color-text-neutral-900);
+    }
+
+    .description {
+      font: var(--typography-body);
+      color: var(--color-text-neutral-500);
+    }
+  }
+}

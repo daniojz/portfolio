@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
-import style from '@componentsStyles/tag.module.scss'
+import style from '@componentsStyles/pill.module.scss'
 
-const Tag = ({ text, type, clickable }) => {
+const Pill = ({ text, type, clickable }) => {
   const typeStyle = () => {
     switch (type) {
       case 'primary':
@@ -17,21 +17,21 @@ const Tag = ({ text, type, clickable }) => {
     }
   }
   return (
-    <div className={`${style.tag} ${typeStyle()}`}>
+    <div className={`${style.pill} ${typeStyle()}`}>
       <span>{text}</span>
     </div>
   )
 }
 
-Tag.propTypes = {
+Pill.propTypes = {
   text: PropTypes.string.isRequired,
   type: PropTypes.string,
   clickable: PropTypes.bool,
 }
 
-Tag.defaultProps = {
+Pill.defaultProps = {
   type: 'neutral1',
   clickable: false,
 }
 
-export default Tag
+export default Pill
