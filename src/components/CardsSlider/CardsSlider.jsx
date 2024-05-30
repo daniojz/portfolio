@@ -9,19 +9,25 @@ const CardsSlider = ({ cardsList }) => {
   const [focusedCard, setFocusedCard] = useState(2)
 
   useEffect(() => {
-    cardsSlider.current
-      .querySelector(`#card-${focusedCard}`)
-      .scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+    const slider = cardsSlider.current
+    const cardElement = slider.querySelector(`#card-${focusedCard}`)
+    if (cardElement) {
+      const cardWidth = cardElement.offsetWidth
+      const cardLeft = cardElement.offsetLeft
+      const sliderCenter = slider.clientWidth / 2
+      const scrollLeft = cardLeft - sliderCenter + cardWidth / 2
+      slider.scrollTo({ left: scrollLeft, behavior: 'smooth' })
+    }
   }, [focusedCard])
 
   const onClickHandleRight = (e) => {
     e.preventDefault()
-    setFocusedCard(focusedCard + 1)
+    setFocusedCard((prev) => Math.min(prev + 1, cardsList.length - 1))
   }
 
   const onClickHandleLeft = (e) => {
     e.preventDefault()
-    setFocusedCard(focusedCard - 1)
+    setFocusedCard((prev) => Math.max(prev - 1, 0))
   }
 
   return (
