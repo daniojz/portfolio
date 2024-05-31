@@ -3,21 +3,20 @@ import style from '@componentsStyles/cardsSlider.module.scss'
 import ProjectCard from '../ProjectCard/ProjectCard'
 import ArrowButton from '../ArrowButton/ArrowButton'
 import { useRef, useState, useEffect } from 'react'
-import { isSmallScreen, isMinMediumScreen } from '../../constants/breakpoints'
+import { isMinMediumScreen } from '../../constants/breakpoints'
 import { useMediaQuery } from 'react-responsive'
 
 const CardsSlider = ({ cardsList }) => {
-  const isSmallScreenQuery = useMediaQuery({ query: isSmallScreen })
   const isMinMediumScreenQuery = useMediaQuery({ query: isMinMediumScreen })
 
   const cardsSlider = useRef()
-  const [focusedCard, setFocusedCard] = useState(isSmallScreenQuery ? 2 : 1)
+  const [focusedCard, setFocusedCard] = useState(isMinMediumScreen ? 2 : 1)
 
   useEffect(() => {
     const slider = cardsSlider.current
     const cardElement = slider.querySelector(`#card-${focusedCard}`)
     if (cardElement) {
-      if (!isSmallScreenQuery) {
+      if (isMinMediumScreen) {
         const cardWidth = cardElement.offsetWidth
         const cardLeft = cardElement.offsetLeft
         const sliderCenter = slider.clientWidth / 2
@@ -29,12 +28,12 @@ const CardsSlider = ({ cardsList }) => {
 
   const onClickHandleRight = (e) => {
     e.preventDefault()
-    setFocusedCard((prev) => Math.min(prev + 1, cardsList.length - 1))
+    setFocusedCard(focusedCard + 1)
   }
 
   const onClickHandleLeft = (e) => {
     e.preventDefault()
-    setFocusedCard((prev) => Math.max(prev - 1, 0))
+    setFocusedCard(focusedCard - 1)
   }
 
   return (

@@ -235,7 +235,55 @@
       },
       {
         "id": "4",
-        "title": "Proyecto 3",
+        "title": "Proyecto 4",
+        "description": "Web Aplications Development",
+        "image": "/demoProjectImage.jpg",
+        "link": "",
+        "aptitudes": [
+          "HTML",
+          "CSS",
+          "React",
+          "Redux",
+          "JavaScript",
+          "Aprendizaje Continuo",
+          "Redux Saga"
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Proyecto 5",
+        "description": "Web Aplications Development",
+        "image": "/demoProjectImage.jpg",
+        "link": "",
+        "aptitudes": [
+          "HTML",
+          "CSS",
+          "React",
+          "Redux",
+          "JavaScript",
+          "Aprendizaje Continuo",
+          "Redux Saga"
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Proyecto 6",
+        "description": "Web Aplications Development",
+        "image": "/demoProjectImage.jpg",
+        "link": "",
+        "aptitudes": [
+          "HTML",
+          "CSS",
+          "React",
+          "Redux",
+          "JavaScript",
+          "Aprendizaje Continuo",
+          "Redux Saga"
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Proyecto 7",
         "description": "Web Aplications Development",
         "image": "/demoProjectImage.jpg",
         "link": "",
@@ -249,6 +297,7 @@
           "Redux Saga"
         ]
       }
+      
     ]
   }
 }

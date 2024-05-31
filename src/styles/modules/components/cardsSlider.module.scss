@@ -41,6 +41,7 @@
     .cardsSlider {
       width: 100%;
       padding: 0;
+      overflow-x: hidden;
 
       #card-1 {
         margin-left: 4%;
