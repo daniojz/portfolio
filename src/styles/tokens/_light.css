@@ -111,10 +111,10 @@ html[data-theme='light'] {
   --breakpoint-medium-screen: 992px;
   --breakpoint-small-screen: 768px;
   --breakpoint-super-small-screen: 576px;
-  --box-shadow-container-mild-normal: 0px 4px 64px 0px #7C7C7C26;
-  --box-shadow-container-mild-hover: 0px 4px 64px 0px #41414105;
-  --box-shadow-container-intense-normal: 0px 4px 32px 0px #41414141;
-  --box-shadow-container-intense-hover: 0px 4px 32px 0px #41414105;
+  --box-shadow-container-mild-normal: 0px 4px 64px 0px #7C7C7C36;
+  --box-shadow-container-mild-hover: 0px 4px 64px 0px #41414111;
+  --box-shadow-container-intense-normal: 0px 4px 32px 0px #41414160;
+  --box-shadow-container-intense-hover: 0px 4px 32px 0px #4141412a;
   --box-shadow-circle-header: 0px 4px 88px 0px #FFFFFF;
   --box-shadow-circle-values: 0px 4px 65px 0px #FFFFFF;
   --box-shadow-circle-certifications: 0px 4px 65px 0px #FFFFFF;

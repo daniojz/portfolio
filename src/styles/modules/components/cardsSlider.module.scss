@@ -3,38 +3,51 @@
   display: flex;
   align-items: center;
   position: relative;
+  left: -5vw;
 
   .cardsSlider {
-    width: 100%;
+    width: 100vw;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     display: flex;
     align-items: center;
-    column-gap: 4%;
+    column-gap: 5%;
     position: relative;
+    padding: 20px;
 
     &::-webkit-scrollbar {
       display: none;
-    }
-
-    #card-1 {
-      margin-left: 4%;
-    }
-    #card-2 {
-      margin-right: 4%;
     }
   }
 
   .buttonRight {
     position: absolute;
-    right: 0;
+    right: -24px;
     z-index: 1;
   }
 
   .buttonLeft {
     position: absolute;
-    left: 0;
+    left: -24px;
     z-index: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .cardSliderContainer {
+    left: 0;
+
+    .cardsSlider {
+      width: 100%;
+      padding: 0;
+
+      #card-1 {
+        margin-left: 4%;
+      }
+      #card-2 {
+        margin-right: 4%;
+      }
+    }
   }
 }

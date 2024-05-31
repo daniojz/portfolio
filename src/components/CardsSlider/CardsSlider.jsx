@@ -3,20 +3,27 @@ import style from '@componentsStyles/cardsSlider.module.scss'
 import ProjectCard from '../ProjectCard/ProjectCard'
 import ArrowButton from '../ArrowButton/ArrowButton'
 import { useRef, useState, useEffect } from 'react'
+import { isSmallScreen, isMinMediumScreen } from '../../constants/breakpoints'
+import { useMediaQuery } from 'react-responsive'
 
 const CardsSlider = ({ cardsList }) => {
+  const isSmallScreenQuery = useMediaQuery({ query: isSmallScreen })
+  const isMinMediumScreenQuery = useMediaQuery({ query: isMinMediumScreen })
+
   const cardsSlider = useRef()
-  const [focusedCard, setFocusedCard] = useState(2)
+  const [focusedCard, setFocusedCard] = useState(isSmallScreenQuery ? 2 : 1)
 
   useEffect(() => {
     const slider = cardsSlider.current
     const cardElement = slider.querySelector(`#card-${focusedCard}`)
     if (cardElement) {
-      const cardWidth = cardElement.offsetWidth
-      const cardLeft = cardElement.offsetLeft
-      const sliderCenter = slider.clientWidth / 2
-      const scrollLeft = cardLeft - sliderCenter + cardWidth / 2
-      slider.scrollTo({ left: scrollLeft, behavior: 'smooth' })
+      if (!isSmallScreenQuery) {
+        const cardWidth = cardElement.offsetWidth
+        const cardLeft = cardElement.offsetLeft
+        const sliderCenter = slider.clientWidth / 2
+        const scrollLeft = cardLeft - sliderCenter + cardWidth / 2
+        slider.scrollTo({ left: scrollLeft, behavior: 'smooth' })
+      }
     }
   }, [focusedCard])
 
@@ -32,7 +39,7 @@ const CardsSlider = ({ cardsList }) => {
 
   return (
     <div className={style.cardSliderContainer}>
-      {cardsList.length > 3 && focusedCard !== 2 ? (
+      {cardsList.length > 3 && focusedCard !== 2 && isMinMediumScreenQuery ? (
         <ArrowButton
           className={style.buttonLeft}
           onClick={onClickHandleLeft}
@@ -42,7 +49,7 @@ const CardsSlider = ({ cardsList }) => {
         ''
       )}
 
-      {cardsList.length > 3 && focusedCard < cardsList.length - 1 ? (
+      {cardsList.length > 3 && focusedCard < cardsList.length - 1 && isMinMediumScreenQuery ? (
         <ArrowButton
           className={style.buttonRight}
           onClick={onClickHandleRight}

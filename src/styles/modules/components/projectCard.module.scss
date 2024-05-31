@@ -1,8 +1,9 @@
 .projectCard {
-  max-width: 30%;
+  max-width: 84%;
   height: min-content;
   border-radius: 16px;
   background-color: var(--color-background-container-transparent050-normal);
+  /* box-shadow: var(--box-shadow-container-mild-normal); */
   cursor: pointer;
   scroll-snap-align: center;
   flex: 0 0 600px;
@@ -38,5 +39,11 @@
       font: var(--typography-body);
       color: var(--color-text-neutral-500);
     }
+  }
+}
+
+@media (min-width: 992px) {
+  .projectCard {
+    max-width: 30%;
   }
 }

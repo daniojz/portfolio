@@ -18,9 +18,17 @@
   }
   .content {
     max-width: 94vw;
-    padding: 100px 24px 24px 24px;
+    padding: 100px 8px 24px 8px;
     display: flex;
     flex-direction: column;
     row-gap: 56px;
+  }
+}
+
+@media (min-width: 768px) {
+  #home {
+    .content {
+      padding: 100px 24px 24px 24px;
+    }
   }
 }

@@ -1,19 +1,31 @@
 .projectsContainer {
-  width: 100%;
-  padding: 0 16px;
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
   row-gap: 16px;
 
   .header {
-    width: 80%;
+    width: 100%;
     font: var(--typography-title3);
     color: var(--color-text-neutral-900);
     text-align: right;
   }
 
   .content {
-    width: 80%;
+    width: 200%;
+    position: relative;
+  }
+}
+
+@media (min-width: 992px) {
+  .projectsContainer {
+    width: 100%;
+    padding: 0 16px;
+    align-items: center;
+
+    .header,
+    .content {
+      width: 90%;
+    }
   }
 }
