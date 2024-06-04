@@ -6,12 +6,12 @@ import { Parallax } from 'react-scroll-parallax'
 import ArrowButton from '../../../components/ArrowButton/ArrowButton'
 
 const Skills = () => {
-  const [t] = useTranslation('global', { keyPrefix: 'global.titles' })
+  const [globalTitles] = useTranslation('global', { keyPrefix: 'global.titles' })
 
   return (
     <section id='Skills' className={style.skillsContainer}>
       <div className={style.header}>
-        <h2>{t(`skills`)}</h2>
+        <h2>{globalTitles(`skills`)}</h2>
       </div>
       <TechSkills></TechSkills>
       <ArrowButton className={style.button}></ArrowButton>

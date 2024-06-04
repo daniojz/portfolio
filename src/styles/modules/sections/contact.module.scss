@@ -5,6 +5,19 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  row-gap: 48px;
+
+  .downloadCvContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  .contactFormContainer {
+  }
 }
 
 @media (min-width: 992px) {

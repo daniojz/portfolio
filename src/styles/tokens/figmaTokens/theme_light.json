@@ -11,7 +11,7 @@
             "value": "{color.global.neutral.100}",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "{color.global.neutral.150}",
             "type": "color"
           }
@@ -25,7 +25,7 @@
             "value": "{color.global.neutral.100}80",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "{color.global.neutral.150}80",
             "type": "color"
           }
@@ -39,7 +39,7 @@
             "value": "{color.global.neutral.100}40",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "{color.global.neutral.150}40",
             "type": "color"
           }
@@ -51,7 +51,7 @@
             "value": "{color.global.neutral.50}",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "{color.global.neutral.300}",
             "type": "color"
           }
@@ -61,7 +61,7 @@
             "value": "#C6DFF2",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "{color.global.primary.200}",
             "type": "color"
           }
@@ -71,7 +71,7 @@
             "value": "{color.global.neutral.300}",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "{color.global.neutral.300}",
             "type": "color"
           }
@@ -81,7 +81,7 @@
             "value": "{color.global.secondary.400}",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "{color.global.secondary.300}",
             "type": "color"
           }
@@ -96,6 +96,10 @@
           "hover": {
             "value": "{color.global.primary.200}",
             "type": "color"
+          },
+          "focus": {
+            "value": "{color.global.neutral.50}",
+            "type": "color"
           }
         },
         "secondary": {
@@ -106,6 +110,10 @@
           "hover": {
             "value": "{color.global.secondary.300}",
             "type": "color"
+          },
+          "focus": {
+            "value": "{color.global.secondary.200}",
+            "type": "color"
           }
         },
         "special": {
@@ -115,12 +123,16 @@
           }
         },
         "neutral": {
-          "50": {
+          "150": {
             "normal": {
-              "value": "{color.global.neutral.50}",
+              "value": "{color.global.neutral.150}",
               "type": "color"
             },
             "hover": {
+              "value": "{color.global.neutral.100}",
+              "type": "color"
+            },
+            "focus": {
               "value": "{color.global.neutral.300}",
               "type": "color"
             }

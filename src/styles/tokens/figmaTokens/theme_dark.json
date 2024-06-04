@@ -11,7 +11,7 @@
             "value": "#4d4d4d",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "#747474",
             "type": "color"
           }
@@ -25,7 +25,7 @@
             "value": "#4d4d4d80",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "#74747480",
             "type": "color"
           }
@@ -39,7 +39,7 @@
             "value": "#4d4d4d40",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "#74747440",
             "type": "color"
           }
@@ -51,7 +51,7 @@
             "value": "{color.global.neutral.50}",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "{color.global.neutral.300}",
             "type": "color"
           }
@@ -61,7 +61,7 @@
             "value": "{color.global.primary.500}",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "{color.global.primary.400}",
             "type": "color"
           }
@@ -71,7 +71,7 @@
             "value": "{color.global.neutral.300}",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "{color.global.neutral.300}",
             "type": "color"
           }
@@ -81,7 +81,7 @@
             "value": "{color.global.secondary.400}",
             "type": "color"
           },
-          "click": {
+          "focus": {
             "value": "{color.global.secondary.300}",
             "type": "color"
           }
@@ -90,21 +90,29 @@
       "button": {
         "primary": {
           "normal": {
-            "value": "{color.global.primary.500}",
+            "value": "{color.global.primary.200}",
             "type": "color"
           },
           "hover": {
+            "value": "{color.global.primary.300}",
+            "type": "color"
+          },
+          "focus": {
             "value": "{color.global.primary.400}",
             "type": "color"
           }
         },
         "secondary": {
           "normal": {
-            "value": "{color.global.secondary.400}",
+            "value": "{color.global.secondary.200}",
             "type": "color"
           },
           "hover": {
             "value": "{color.global.secondary.300}",
+            "type": "color"
+          },
+          "hover-copy": {
+            "value": "{color.global.secondary.400}",
             "type": "color"
           }
         },
@@ -117,11 +125,15 @@
         "neutral": {
           "50": {
             "normal": {
-              "value": "{color.global.neutral.50}",
+              "value": "{color.global.neutral.150}",
               "type": "color"
             },
             "hover": {
               "value": "{color.global.neutral.300}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{color.global.neutral.50}",
               "type": "color"
             }
           }
