@@ -1,11 +1,33 @@
 .container {
   display: none;
+}
 
+.neutral50 {
   a {
     color: var(--color-icons-neutral-50-normal);
 
     :hover {
       color: var(--color-icons-neutral-50-hover);
+    }
+  }
+}
+
+.neutral400 {
+  a {
+    color: var(--color-icons-neutral-400-normal);
+
+    :hover {
+      color: var(--color-icons-neutral-400-hover);
+    }
+  }
+}
+
+.neutral500 {
+  a {
+    color: var(--color-icons-neutral-500-normal);
+
+    :hover {
+      color: var(--color-icons-neutral-500-hover);
     }
   }
 }
