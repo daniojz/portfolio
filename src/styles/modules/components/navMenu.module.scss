@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 8vh;
+  height: 80px;
   padding: 16px 32px 0px 32px;
   display: flex;
   justify-content: right;
@@ -54,10 +54,11 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: display 0.1s ease-in;
     }
 
     .navOptions {
-      margin: 64px 40px;
+      margin: 48px 0px;
       color: var(--color-text-neutral-900);
       font: var(--typography-title3);
 
@@ -72,20 +73,25 @@
 
         a {
           position: relative;
-          left: 0;
+          right: 0;
+          text-align: center;
 
           &:hover {
             position: relative;
-            left: 10px;
+            right: 4px;
             color: var(--color-text-neutral-300);
-            transition: left 0.1s ease-in;
+            transition: right 0.04s ease-in-out;
           }
         }
       }
     }
   }
+
   .isContentShow {
     top: 0vh !important;
+  }
+  .isOptionsHidden {
+    display: none !important;
   }
   .isNavOptionShow {
     top: 0vh !important;
@@ -96,9 +102,25 @@
   height: 100vh !important;
 }
 
+@media (min-width: 576px) {
+  .navMenu {
+    .content {
+      .navOptions {
+        margin: 48px 64px;
+
+        li {
+          a {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 992px) {
   .navMenu {
-    padding: 8px 30px 0px 30px;
+    padding: 0px 30px 0px 30px;
     transition: none;
 
     .config {

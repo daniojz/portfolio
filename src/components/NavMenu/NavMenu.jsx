@@ -1,51 +1,62 @@
 import { Icon } from '@iconify/react'
 import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import { MediumScreen } from '../../constants/breakpoints'
 import ThemeButton from '../../components/ThemeButton/ThemeButton'
 import LanguajeButton from '../LanguajeButton/LanguajeButton'
 import style from '@componentsStyles/navMenu.module.scss'
 
 const NavMenu = () => {
   const [t] = useTranslation('global', { keyPrefix: 'navMenu' })
-  const [mobileState, setMobileState] = useState('hidden')
+
+  const [hamburguerMenuState, setHamburguerMenuState] = useState('hidden') // estado de menu en modo hamburguer -> oculto o desplegado
+  const [seconds, setSeconds] = useState(0)
+  const [isMobileScreen, setIsMobileScreen] = useState(window.screen.width < MediumScreen)
+
   const content = useRef()
   const nav = useRef()
   const navOptions = useRef()
+  const options = useRef()
 
+  // añade estilo de transitionDelay de manera incremental a cada option del menu
   const addStyles = () => {
-    const options = [...navOptions.current.children]
+    const childrenOptions = [...navOptions.current.children]
     let seconds = 0
 
-    for (let i = 0; i < options.length; i++) {
-      const option = options[i]
+    for (let i = 0; i < childrenOptions.length; i++) {
+      const option = childrenOptions[i]
       seconds = seconds + 0.05
       option.style.transitionDelay = seconds + 0.05 + 's'
     }
+
+    setSeconds((seconds + 0.2) * 1000)
   }
 
-  const onClickHamburguerHandler = () => {
-    const options = [...navOptions.current.children]
+  // click en boton de menu hamburger
+  const onClickHamburguerMenuHandler = () => {
+    const childrenOptions = [...navOptions.current.children]
 
-    if (mobileState === 'hidden') {
-      setMobileState('show')
+    if (hamburguerMenuState === 'hidden') {
+      setHamburguerMenuState('show')
 
       content.current.classList.add(`${style.isContentShow}`)
       nav.current.classList.add(`${style.isNavOpen}`)
-      options.forEach((option) => option.classList.add(`${style.isNavOptionShow}`))
+      childrenOptions.forEach((option) => option.classList.add(`${style.isNavOptionShow}`))
     } else {
-      setMobileState('hidden')
+      setHamburguerMenuState('hidden')
 
       content.current.classList.remove(`${style.isContentShow}`)
       nav.current.classList.remove(`${style.isNavOpen}`)
-      options.forEach((option) => option.classList.remove(`${style.isNavOptionShow}`))
+      childrenOptions.forEach((option) => option.classList.remove(`${style.isNavOptionShow}`))
     }
   }
 
+  // click en cada option del menu
   const onClickOptionHandler = () => {
     const options = [...navOptions.current.children]
 
-    if (mobileState !== 'hidden') {
-      setMobileState('hidden')
+    if (hamburguerMenuState === 'show') {
+      setHamburguerMenuState('hidden')
 
       content.current.classList.remove(`${style.isContentShow}`)
       nav.current.classList.remove(`${style.isNavOpen}`)
@@ -55,22 +66,37 @@ const NavMenu = () => {
 
   useEffect(() => {
     addStyles()
+    const options = [...navOptions.current.children]
+
+    if (!isMobileScreen) {
+      setHamburguerMenuState('hidden')
+
+      content.current.classList.remove(`${style.isContentShow}`)
+      nav.current.classList.remove(`${style.isNavOpen}`)
+      options.forEach((option) => option.classList.remove(`${style.isNavOptionShow}`))
+    } else {
+      setHamburguerMenuState('hidden')
+    }
 
     const handleResize = (event) => {
-      const screenWith = window.screen.width
       const options = [...navOptions.current.children]
 
-      if (screenWith >= 992 && mobileState === 'hidden') {
-        setMobileState('hidden')
+      if (!isMobileScreen && hamburguerMenuState === 'hidden') {
+        setHamburguerMenuState('hidden')
+
+        content.current.classList.remove(`${style.isContentShow}`)
         nav.current.classList.remove(`${style.isNavOpen}`)
         options.forEach((option) => option.classList.remove(`${style.isNavOptionShow}`))
       }
-      if (screenWith < 992) {
+      //si ahora es pantalla de movil (window.screen.width) y antes lo era (isMobileScreen)...
+      if (window.screen.width < MediumScreen && !isMobileScreen) {
         nav.current.classList.add(`${style.resizeAnimationStopper}`)
         setTimeout(() => {
           nav.current.classList.remove(`${style.resizeAnimationStopper}`)
         }, 400)
       }
+
+      setIsMobileScreen(window.screen.width < MediumScreen)
     }
     window.addEventListener('resize', handleResize)
 
@@ -81,10 +107,10 @@ const NavMenu = () => {
 
   return (
     <nav className={style.navMenu} ref={nav}>
-      <button onClick={onClickHamburguerHandler} className={style.hamburgerButton}>
+      <button onClick={onClickHamburguerMenuHandler} className={style.hamburgerButton}>
         <Icon
           icon={`akar-icons:${
-            mobileState === 'show' ? 'two-line-vertical' : 'two-line-horizontal'
+            hamburguerMenuState === 'show' ? 'two-line-vertical' : 'two-line-horizontal'
           }`}
           width={40}
           height={40}
@@ -94,7 +120,7 @@ const NavMenu = () => {
         <a href='/' className={style.homeLink}>
           <span>{t(`homeLinkText`)}</span>
         </a>
-        <div className={style.options}>
+        <div className={style.options} ref={options}>
           <ul className={style.navOptions} ref={navOptions}>
             {t(`options`).map((option) => (
               <li key={option.name} onClick={onClickOptionHandler}>
