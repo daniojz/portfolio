@@ -4,12 +4,12 @@ import CardsSlider from '../../../components/CardsSlider/CardsSlider'
 
 const Projects = () => {
   const [t] = useTranslation('home', { keyPrefix: 'projects' })
-  const [global] = useTranslation('global', { keyPrefix: 'global.titles' })
+  const [globalTitles] = useTranslation('global', { keyPrefix: 'global.titles' })
 
   return (
     <section id='Projects' className={style.projectsContainer}>
       <div className={style.header}>
-        <h2>{global('projects')}</h2>
+        <h2>{globalTitles('projects')}</h2>
       </div>
       <div className={style.content}>
         <CardsSlider cardsList={t('projectsCards')}></CardsSlider>

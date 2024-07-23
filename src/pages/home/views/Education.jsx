@@ -5,12 +5,12 @@ import ArrowButton from '../../../components/ArrowButton/ArrowButton'
 
 const Education = () => {
   const [t] = useTranslation('home', { keyPrefix: 'education' })
-  const [global] = useTranslation('global', { keyPrefix: 'global.titles' })
+  const [globalTitles] = useTranslation('global', { keyPrefix: 'global.titles' })
 
   return (
     <section id='Education' className={style.educationContainer}>
       <div className={style.titulationCards}>
-        <h2 className={style.header}>{global(`education`)}</h2>
+        <h2 className={style.header}>{globalTitles(`education`)}</h2>
         {t('titulationCards').map((card) => (
           <TitulationCard key={card.id} titulationCard={card}></TitulationCard>
         ))}
