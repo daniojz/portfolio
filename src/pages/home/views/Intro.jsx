@@ -27,11 +27,14 @@ const Intro = () => {
           </div>
         </Atropos>
 
-        <FollowMe styles={style.links}></FollowMe>
+        <div className={style.subContent}>
+          <FollowMe styles={style.links}></FollowMe>
 
-        <div className={style.description}>
-          <p>{t('introDescription')}</p>
+          <div className={style.description}>
+            <p>{t('introDescription')}</p>
+          </div>
         </div>
+
 
         <a href='#Experience' className={style.anchorLink}>
           <Icon icon='akar-icons:chevron-down' width='24' height='24' />
