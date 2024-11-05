@@ -13,6 +13,7 @@
   flex-direction: column;
   backdrop-filter: blur(16px);
   transition: height 0.5s;
+  overflow-y: scroll;
 
   .config {
     margin-bottom: 64px;
@@ -22,6 +23,8 @@
     align-items: center;
     column-gap: 16px;
     color: var(--color-text-neutral-900);
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
   }
 
   .hamburgerButton {
@@ -129,6 +132,7 @@
       width: auto;
       position: static;
       column-gap: 8px;
+      opacity: 100;
     }
     .content {
       max-width: 1440px;
@@ -137,7 +141,7 @@
       justify-content: space-between;
       align-items: center;
       flex-direction: row;
-      transition: none;
+      // transition: none;
 
       .homeLink {
         display: block;
