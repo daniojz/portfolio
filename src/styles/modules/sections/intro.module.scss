@@ -22,10 +22,13 @@
   }
 
   .subContent {
+    position: absolute;
+    bottom: 56px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 
     .links {
       // position: relative;
