@@ -6,7 +6,7 @@ const TechSkills = () => {
   const skillsContainer = useRef()
 
   const changePosition = (icon) => {
-    const limit = 25
+    const limit = 35
 
     const randomX = Math.random() * 2 * limit - limit
     const randomY = Math.random() * 2 * limit - limit

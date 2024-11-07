@@ -1,12 +1,13 @@
 .navMenu {
+  width: calc(100vw - 16px);
+  height: 56px;
+  margin: 8px 0px;
+  padding: 8px 32px 8px 32px;
   position: -webkit-fixed;
   position: fixed;
   z-index: 10000000;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 80px;
-  padding: 16px 32px 0px 32px;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   justify-content: right;
   align-items: center;
@@ -14,7 +15,15 @@
   backdrop-filter: blur(16px);
   transition: height 0.5s;
   overflow-y: scroll;
+  border-radius: 8px;
+  background-color: var(--color-background-general-navheader);
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;     /* Firefox */
 
+  ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Opera */
+  }
+  
   .config {
     margin-bottom: 64px;
     width: 100%;
@@ -102,7 +111,7 @@
   }
 }
 .isNavOpen {
-  height: 100vh !important;
+  height: calc(100vh - 16px) !important;
 }
 
 @media (min-width: 576px) {

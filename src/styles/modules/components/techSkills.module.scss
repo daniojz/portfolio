@@ -69,8 +69,8 @@
     }
     @for $i from 1 through 7 {
       :nth-child(#{$i}) {
-        top: random() * 60 - 20 + px;
-        left: random() * 60 - 20 + px;
+        top: random() * 60 - 30 + px;
+        left: random() * 60 - 30 + px;
       }
     }
   }
