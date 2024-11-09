@@ -15,7 +15,7 @@ const NavMenu = () => {
   const content = useRef()
   const nav = useRef()
   const navOptions = useRef()
-  const configOption = useRef();
+  const configOption = useRef()
 
   // añade estilo de transitionDelay de manera incremental a cada option del menu
   const addStyles = () => {
@@ -31,14 +31,12 @@ const NavMenu = () => {
 
   // click en boton de menu hamburger
   const onClickHamburguerMenuHandler = () => {
-
     if (hamburguerMenuState === 'hidden') {
       setHamburguerMenuState('show')
-      document.body.classList.add('no-scroll');
-
+      document.body.classList.add('no-scroll')
     } else {
       setHamburguerMenuState('hidden')
-      document.body.classList.remove('no-scroll');
+      document.body.classList.remove('no-scroll')
     }
   }
 
@@ -46,7 +44,7 @@ const NavMenu = () => {
   const onClickOptionHandler = () => {
     if (hamburguerMenuState === 'show') {
       setHamburguerMenuState('hidden')
-      document.body.classList.remove('no-scroll');
+      document.body.classList.remove('no-scroll')
     }
   }
 
@@ -60,52 +58,31 @@ const NavMenu = () => {
         // setTimeout(() => {
         //   nav.current.classList.remove(`${style.resizeAnimationStopper}`)
         // }, 100)
-        content.current.style.display = "none";
+        content.current.style.visibility = 'hidden'
         setTimeout(() => {
-          content.current.style.display = "";
-      }, 100)
+          content.current.style.visibility = ''
+        }, 100)
       }
 
       nav.current.classList.add(`${style.resizeAnimationStopper}`)
-        setTimeout(() => {
+      setTimeout(() => {
         nav.current.classList.remove(`${style.resizeAnimationStopper}`)
       }, 1000)
 
-        return currentHamburguerMenuState; // Mantiene el estado actual sin cambiarlo
-    });
-
-  }, [isMobileScreen]); // Solo ejecuta cuando cambia isMobileScreen (cuando la query max-width supera el valor de MediumScreen)
-
-  useEffect(() => {
-    const childrenOptions = [...navOptions.current.children]
-
-    if (hamburguerMenuState === 'show') {
-
-      content.current.classList.add(`${style.isContentShow}`)
-      nav.current.classList.add(`${style.isNavOpen}`)
-      childrenOptions.forEach((option) => option.classList.add(`${style.isNavOptionShow}`))
-      configOption.current.classList.add(`${style.isNavOptionShow}`)
-
-    } else if (hamburguerMenuState === 'hidden') {
-      content.current.classList.remove(`${style.isContentShow}`)
-      nav.current.classList.remove(`${style.isNavOpen}`)
-      childrenOptions.forEach((option) => option.classList.remove(`${style.isNavOptionShow}`))
-      configOption.current.classList.remove(`${style.isNavOptionShow}`)
-    }
-
-  }, [hamburguerMenuState])
+      return currentHamburguerMenuState // Mantiene el estado actual sin cambiarlo
+    })
+  }, [isMobileScreen]) // Solo ejecuta cuando cambia isMobileScreen (cuando la query max-width supera el valor de MediumScreen)
 
   useEffect(() => {
     addStyles()
 
     if (!(window.screen.width < MediumScreen)) {
       setHamburguerMenuState('hidden')
-    } 
-
+    }
   }, [])
 
   return (
-    <nav className={style.navMenu} ref={nav}>
+    <nav className={`${style.navMenu} ${style[`isNav-${hamburguerMenuState}`]}`} ref={nav}>
       <button onClick={onClickHamburguerMenuHandler} className={style.hamburgerButton}>
         <Icon
           icon={`akar-icons:${
@@ -115,19 +92,29 @@ const NavMenu = () => {
           height={40}
         />
       </button>
-      <div className={style.content} ref={content}>
+      <div
+        className={`${style.content} ${style[`isContent-${hamburguerMenuState}`]}`}
+        ref={content}
+      >
         <a href='/' className={style.homeLink}>
           <span>{t(`homeLinkText`)}</span>
         </a>
         <div className={style.options}>
           <ul className={style.navOptions} ref={navOptions}>
             {t(`options`).map((option) => (
-              <li key={option.name} onClick={onClickOptionHandler}>
+              <li
+                key={option.name}
+                onClick={onClickOptionHandler}
+                className={`${style[`isNavOption-${hamburguerMenuState}`]}`}
+              >
                 <a href={`#${option.anchor}`}>{option.name}</a>
               </li>
             ))}
           </ul>
-          <div className={style.config} ref={configOption}>
+          <div
+            className={`${style.config} ${style[`isNavOption-${hamburguerMenuState}`]}`}
+            ref={configOption}
+          >
             <ThemeButton></ThemeButton>
             <LanguajeButton></LanguajeButton>
           </div>
