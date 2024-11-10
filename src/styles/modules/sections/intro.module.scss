@@ -29,7 +29,6 @@
     align-items: center;
     justify-content: center;
 
-
     .links {
       // position: relative;
       // top: 48px;
@@ -46,8 +45,6 @@
     }
   }
 }
-
-
 
 .anchorLink {
   position: absolute;
@@ -71,7 +68,7 @@
   left: 30vw;
   width: 1000px;
   height: 1000px;
-  background: var(--color-circle-header);
+  background-image: var(--noise-background-circle-header), var(--color-circle-header);
   border-radius: var(--border-radius-circle);
   box-shadow: var(--box-shadow-circle-header);
 }

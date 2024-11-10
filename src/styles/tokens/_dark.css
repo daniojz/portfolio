@@ -1,22 +1,22 @@
 html[data-theme='dark'] {
-  --color-global-primary-200: #E2F5FF;
-  --color-global-primary-300: #C0D0E9;
-  --color-global-primary-400: #71ADD9;
+  --color-global-primary-200: #e2f5ff;
+  --color-global-primary-300: #c0d0e9;
+  --color-global-primary-400: #71add9;
   --color-global-primary-500: #4687bd;
-  --color-global-primary-600: #001F36;
-  --color-global-secondary-200: #FFEDFD;
-  --color-global-secondary-300: #F5B8EF;
-  --color-global-secondary-400: #FF88F3;
-  --color-global-secondary-500: #F85EFB;
-  --color-global-semantic-info: #367CE5;
-  --color-global-semantic-alert: #FFED48;
-  --color-global-semantic-success: #5EF351;
-  --color-global-semantic-error: #FF3A3A;
-  --color-global-neutral-50: #FFFFFF;
-  --color-global-neutral-100: #F5F5F5;
-  --color-global-neutral-150: #E4E4E4;
-  --color-global-neutral-300: #B3B3B3;
-  --color-global-neutral-400: #7C7C7C;
+  --color-global-primary-600: #001f36;
+  --color-global-secondary-200: #ffedfd;
+  --color-global-secondary-300: #f5b8ef;
+  --color-global-secondary-400: #ff88f3;
+  --color-global-secondary-500: #f85efb;
+  --color-global-semantic-info: #367ce5;
+  --color-global-semantic-alert: #ffed48;
+  --color-global-semantic-success: #5ef351;
+  --color-global-semantic-error: #ff3a3a;
+  --color-global-neutral-50: #ffffff;
+  --color-global-neutral-100: #f5f5f5;
+  --color-global-neutral-150: #e4e4e4;
+  --color-global-neutral-300: #b3b3b3;
+  --color-global-neutral-400: #7c7c7c;
   --color-global-neutral-500: #414141;
   --color-global-neutral-900: #101010;
   --color-global-neutral-1000: #000;
@@ -29,51 +29,60 @@ html[data-theme='dark'] {
   --color-background-container-transparent025-normal: #41414140;
   --color-background-container-transparent025-hover: #4d4d4d40;
   --color-background-container-transparent025-focus: #74747440;
-  --color-background-tag-neutral1-normal: #FFFFFF;
-  --color-background-tag-neutral1-focus: #B3B3B3;
+  --color-background-tag-neutral1-normal: #ffffff;
+  --color-background-tag-neutral1-focus: #b3b3b3;
   --color-background-tag-primary-normal: #4687bd;
-  --color-background-tag-primary-focus: #71ADD9;
-  --color-background-tag-neutral2-normal: #B3B3B3;
-  --color-background-tag-neutral2-focus: #B3B3B3;
-  --color-background-tag-secondary-normal: #FF88F3;
-  --color-background-tag-secondary-focus: #F5B8EF;
-  --color-background-button-primary-normal: #E2F5FF;
-  --color-background-button-primary-hover: #C0D0E9;
-  --color-background-button-primary-focus: #71ADD9;
-  --color-background-button-secondary-normal: #FFEDFD;
-  --color-background-button-secondary-hover: #F5B8EF;
-  --color-background-button-secondary-hover-copy: #FF88F3;
-  --color-background-button-special-special1: conic-gradient(from 180deg at 50% 50%, #F85EFB 58.12499821186066deg, #4687bd 161.2499964237213deg, #71ADD9b8 279.3750071525574deg);
-  --color-background-button-neutral-50-normal: #E4E4E4;
-  --color-background-button-neutral-50-hover: #B3B3B3;
-  --color-background-button-neutral-50-focus: #FFFFFF;
-  --color-background-general-certifications: linear-gradient(90deg, #011A2D 0%, #101010 100%);
-  --color-background-general-body: linear-gradient(180deg, #000609 0%, #0F0F0F 88.54%);
-  --color-background-general-header: linear-gradient(243deg, #001F36 19.81%, #000 75.98%);
+  --color-background-tag-primary-focus: #71add9;
+  --color-background-tag-neutral2-normal: #b3b3b3;
+  --color-background-tag-neutral2-focus: #b3b3b3;
+  --color-background-tag-secondary-normal: #ff88f3;
+  --color-background-tag-secondary-focus: #f5b8ef;
+  --color-background-button-primary-normal: #e2f5ff;
+  --color-background-button-primary-hover: #c0d0e9;
+  --color-background-button-primary-focus: #71add9;
+  --color-background-button-secondary-normal: #ffedfd;
+  --color-background-button-secondary-hover: #f5b8ef;
+  --color-background-button-secondary-hover-copy: #ff88f3;
+  --color-background-button-special-special1: conic-gradient(
+    from 180deg at 50% 50%,
+    #f85efb 58.12499821186066deg,
+    #4687bd 161.2499964237213deg,
+    #71add9b8 279.3750071525574deg
+  );
+  --color-background-button-neutral-50-normal: #e4e4e4;
+  --color-background-button-neutral-50-hover: #b3b3b3;
+  --color-background-button-neutral-50-focus: #ffffff;
+  --color-background-general-certifications: linear-gradient(90deg, #011a2d 0%, #101010 100%);
+  --color-background-general-body: linear-gradient(180deg, #000609 0%, #0f0f0f 88.54%);
+  --color-background-general-header: linear-gradient(243deg, #001f36 19.81%, #000 75.98%);
   --color-background-general-footer: #000;
-  --color-background-general-concepts: linear-gradient(90deg, #000D16 37.53%, #000 99.9%);;
+  --color-background-general-concepts: linear-gradient(90deg, #000d16 37.53%, #000 99.9%);
   --color-background-general-navheader: #41414175;
   --color-text-neutral-50: #101010;
   --color-text-neutral-100: #414141;
-  --color-text-neutral-150: #7C7C7C;
-  --color-text-neutral-300: #B3B3B3;
-  --color-text-neutral-400: #E4E4E4;
-  --color-text-neutral-500: #F5F5F5;
-  --color-text-neutral-900: #FFFFFF;
-  --color-text-special-principle: #FFFFFF40;
-  --color-icons-neutral-50-normal: #FFFFFF;
-  --color-icons-neutral-50-hover: #7C7C7C;
-  --color-icons-neutral-400-normal: #7C7C7C;
+  --color-text-neutral-150: #7c7c7c;
+  --color-text-neutral-300: #b3b3b3;
+  --color-text-neutral-400: #e4e4e4;
+  --color-text-neutral-500: #f5f5f5;
+  --color-text-neutral-900: #ffffff;
+  --color-text-special-principle: #ffffff40;
+  --color-icons-neutral-50-normal: #ffffff;
+  --color-icons-neutral-50-hover: #7c7c7c;
+  --color-icons-neutral-400-normal: #7c7c7c;
   --color-icons-neutral-400-hover: #414141;
   --color-icons-neutral-500-normal: #414141;
   --color-icons-neutral-500-hover: #101010;
-  --color-view-shadow-primary: #001F36;
-  --color-view-shadow-secondary: #FF88F3;
+  --color-view-shadow-primary: #001f36;
+  --color-view-shadow-secondary: #ff88f3;
   --color-view-shadow-neutral: #101010;
-  --color-circle-header: linear-gradient(161deg, rgba(7, 7, 7, 0.92) 25.49%, rgba(0, 0, 0, 0.00) 68.7%);
-  --color-circle-values: linear-gradient(161deg, #001F36 16.89%, rgba(0, 0, 0) 49.44%);
-  --color-circle-concepts: linear-gradient(161deg, #001F36 16.89%, rgba(0, 0, 0, 0.00) 50.26%);
-  --color-circle-certifications: linear-gradient(161deg, #001F36 16.89%, rgba(0, 0, 0, 0.00) 50.26%);
+  --color-circle-header: linear-gradient(
+    161deg,
+    rgba(7, 7, 7, 0.92) 25.49%,
+    rgba(0, 0, 0, 0) 68.7%
+  );
+  --color-circle-values: linear-gradient(161deg, #001f36 16.89%, rgba(0, 0, 0) 49.44%);
+  --color-circle-concepts: linear-gradient(161deg, #001f36 16.89%, rgba(0, 0, 0, 0) 50.26%);
+  --color-circle-certifications: linear-gradient(161deg, #001f36 16.89%, rgba(0, 0, 0, 0) 50.26%);
   --border-radius-circle: 100%;
   --border-radius-large: 16%;
   --border-radius-medium: 8%;
@@ -114,12 +123,14 @@ html[data-theme='dark'] {
   --breakpoint-medium-screen: 992px;
   --breakpoint-small-screen: 768px;
   --breakpoint-super-small-screen: 576px;
-  --box-shadow-container-mild-normal: 0px 4px 64px 0px #7C7C7C26;
+  --box-shadow-container-mild-normal: 0px 4px 64px 0px #7c7c7c26;
   --box-shadow-container-mild-hover: 0px 4px 64px 0px #41414105;
   --box-shadow-container-intense-normal: 0px 4px 32px 0px #41414141;
   --box-shadow-container-intense-hover: 0px 4px 32px 0px #41414105;
-  --box-shadow-circle-header: 0px 4px 88px 0px #0E3451;
+  --box-shadow-circle-header: 0px 4px 88px 0px #0e3451;
   --box-shadow-circle-values: 0px 4px 65px 0px #003963;
   --box-shadow-circle-certifications: 0px 4px 65px 0px #003963;
   --box-shadow-circle-concepts: 0px 4px 65px 0px #003963;
+  /*noise-backgrounds*/
+  --noise-background-circle-header: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20version%3D%221.1%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20xmlns%3Asvgjs%3D%22http%3A//svgjs.dev/svgjs%22%20viewBox%3D%220%200%20700%20700%22%20width%3D%22700%22%20height%3D%22700%22%20opacity%3D%220.51%22%3E%3Cdefs%3E%3Cfilter%20id%3D%22nnnoise-filter%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%20filterUnits%3D%22objectBoundingBox%22%20primitiveUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22linearRGB%22%3E%3CfeTurbulence%20type%3D%22turbulence%22%20baseFrequency%3D%220.2%22%20numOctaves%3D%224%22%20seed%3D%2215%22%20stitchTiles%3D%22stitch%22%20x%3D%220%25%22%20y%3D%220%25%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20result%3D%22turbulence%22%3E%3C/feTurbulence%3E%3CfeSpecularLighting%20surfaceScale%3D%225%22%20specularConstant%3D%220.4%22%20specularExponent%3D%2220%22%20lighting-color%3D%22%23ffffff%22%20x%3D%220%25%22%20y%3D%220%25%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20in%3D%22turbulence%22%20result%3D%22specularLighting%22%3E%3CfeDistantLight%20azimuth%3D%223%22%20elevation%3D%2294%22%3E%3C/feDistantLight%3E%3C/feSpecularLighting%3E%3C/filter%3E%3C/defs%3E%3Crect%20width%3D%22700%22%20height%3D%22700%22%20fill%3D%22transparent%22%3E%3C/rect%3E%3Crect%20width%3D%22700%22%20height%3D%22700%22%20fill%3D%22%23ffffff%22%20filter%3D%22url(%23nnnoise-filter)%22%3E%3C/rect%3E%3C/svg%3E');
 }
