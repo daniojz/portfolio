@@ -39,5 +39,8 @@
         "name": "Contacto"
       }
     ]
+  },
+  "footer": {
+    "copyright": "© 2024 dani."
   }
 }

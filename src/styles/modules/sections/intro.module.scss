@@ -30,8 +30,10 @@
     justify-content: center;
 
     .links {
-      // position: relative;
-      // top: 48px;
+      color: var(--color-icons-neutral-50-normal);
+      :hover {
+        color: var(--color-icons-neutral-50-hover);
+      }
     }
 
     .description {
@@ -64,11 +66,15 @@
 .circle {
   content: '';
   position: absolute;
-  top: -20vh;
-  left: 30vw;
+  top: -32vh;
+  left: 8vw;
+  max-width: none;
   width: 1000px;
   height: 1000px;
-  background-image: var(--noise-background-circle-header), var(--color-circle-header);
+  background-image: var(--figure-circle-header), var(--color-circle-header);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;  /* Ajuste el tamaño del fondo */
   border-radius: var(--border-radius-circle);
   box-shadow: var(--box-shadow-circle-header);
 }

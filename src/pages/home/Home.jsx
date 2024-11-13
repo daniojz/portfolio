@@ -4,6 +4,7 @@ import Intro from './views/Intro'
 import Skills from './views/Skills'
 import Proyects from './views/Projects'
 import Contact from './views/Contact'
+import Footer from '../../components/Footer/footer'
 
 const Home = () => {
   return (
@@ -20,7 +21,9 @@ const Home = () => {
           <Contact></Contact>
         </div>
       </div>
-      <footer></footer>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   )
 }

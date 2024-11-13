@@ -4,8 +4,7 @@ import style from '@componentsStyles/followMe.module.scss'
 
 const FollowMe = ({ styles, iconSize }) => {
   return (
-    <div className={styles}>
-      <div className={style.container}>
+    <div className={`${styles} ${style.container}`}>
         <span>
           <a href=''>
             <Icon icon='akar-icons:github-fill' width={iconSize} height={iconSize} />
@@ -21,7 +20,6 @@ const FollowMe = ({ styles, iconSize }) => {
             <Icon icon='akar-icons:figma-fill' width={iconSize} height={iconSize} />
           </a>
         </span>
-      </div>
     </div>
   )
 }
