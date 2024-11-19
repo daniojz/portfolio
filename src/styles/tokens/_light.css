@@ -136,5 +136,5 @@ html[data-theme='light'] {
   --box-shadow-circle-certifications: 0px 4px 65px 0px #ffffff;
   --box-shadow-circle-concepts: 0px 4px 65px 0px #ffffff;
   /*figures*/
-  --figure-circle-header: url('/public/figures/circle-header-light.svg');
+  --figure-circle-header: url('/public/figures/circle-figure-header-light.svg');
 }

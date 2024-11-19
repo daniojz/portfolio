@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { Transition } from 'react-transition-group';
 import style from '@sectionsStyles/skills.module.scss'
 import TechSkills from '../../../components/TechSkills/TechSkills'
 import Principles from '../../../components/Principles/Principles'

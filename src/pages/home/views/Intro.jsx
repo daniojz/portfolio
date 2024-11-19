@@ -12,6 +12,7 @@ const Intro = () => {
     <div className={style.introContainer}>
       <Parallax translateY={[-150, 100]}>
         <div className={style.circle}></div>
+        {/* <img src='/figures/circle-figure-header-light.svg'></img> */}
       </Parallax>
 
       <div className={style.content}>
@@ -34,7 +35,6 @@ const Intro = () => {
             <p>{t('introDescription')}</p>
           </div>
         </div>
-
 
         <a href='#Experience' className={style.anchorLink}>
           <Icon icon='akar-icons:chevron-down' width='24' height='24' />

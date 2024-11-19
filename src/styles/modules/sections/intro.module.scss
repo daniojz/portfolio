@@ -71,10 +71,11 @@
   max-width: none;
   width: 1000px;
   height: 1000px;
-  background-image: var(--figure-circle-header), var(--color-circle-header);
+  filter: url('data:image/svg+xml;base64,PHN2Zz4KICA8ZmlsdGVyIGlkPSdub2lzZUZpbHRlcic+CiAgICA8ZmVUdXJidWxlbmNlIAogICAgICB0eXBlPSdmcmFjdGFsTm9pc2UnIAogICAgICBiYXNlRnJlcXVlbmN5PScwLjYnIAogICAgICBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+CiAgICAgPGZlQ29sb3JNYXRyaXggaW49ImNvbG9yTm9pc2UiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIxIDAgMCAwIDAgMCAxIDAgMCAwIDAgMCAxIDAgMCAwIDAgMCAxIDAiIC8+CiAgICAgICAgPGZlQ29tcG9zaXRlIG9wZXJhdG9yPSJpbiIgaW4yPSJTb3VyY2VHcmFwaGljIiByZXN1bHQ9Im1vbm9Ob2lzZSIvPgogICAgICAgIDxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9Im1vbm9Ob2lzZSIgbW9kZT0ic2NyZWVuIiAvPgogIDwvZmlsdGVyPgogIAo8L3N2Zz4=');
+  background-image: var(--color-circle-header);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain;  /* Ajuste el tamaño del fondo */
+  background-size: contain; /* Ajuste el tamaño del fondo */
   border-radius: var(--border-radius-circle);
   box-shadow: var(--box-shadow-circle-header);
 }
