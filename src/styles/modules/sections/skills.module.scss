@@ -14,13 +14,37 @@
     font: var(--typography-title3);
   }
 
-  .windowWrapper {
+  .skillsWrapper {
+    position: relative;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: left 1s ease;
+  }
+  .skillsWrapper-enter {
+    left: auto;
+  }
+  .skillsWrapper-entering {
+    left: auto;
+  }
+  .skillsWrapper-enter-active {
+    left: -1000px;
+  }
+  .skillsWrapper-exit {
+  }
+  .skillsWrapper-exiting {
+  }
+  .skillsWrapper-exit-active {
+    left: auto;
+  }
+
+  .conceptsWrapper {
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
   }
 
   .button {
