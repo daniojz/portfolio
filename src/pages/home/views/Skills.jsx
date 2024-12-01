@@ -5,48 +5,56 @@ import Principles from '../../../components/Principles/Principles'
 import { Parallax } from 'react-scroll-parallax'
 import ArrowButton from '../../../components/ArrowButton/ArrowButton'
 import { useRef, useState } from 'react'
-import { CSSTransition } from 'react-transition-group'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 const Skills = () => {
   const [globalTitles] = useTranslation('global', { keyPrefix: 'global.titles' })
-  const [showConcepts, setShowConcepts] = useState(true)
-  const [showSkills, setShowSkills] = useState(true)
+  const [activeContent, setActiveContent] = useState(0)
 
   const skillsWrapper = useRef()
-  const conceptsWrapper = useRef()
+  const skillsContent = useRef()
+  const conceptsContent = useRef()
+  const currentContentRef = activeContent === '1' ? skillsContent : conceptsContent
 
-  const onClickChangeWrapperHandler = () => {
+  const contents = [
+    <div key='1' ref={skillsContent} className={style.skillsContent}>
+      <div className={style.header}>
+        <h2>{globalTitles(`skills`)}</h2>
+      </div>
+      <TechSkills></TechSkills>
+      <ArrowButton onClick={() => setActiveContent(1)} className={style.button}></ArrowButton>
+    </div>,
+    <div key='2' ref={conceptsContent} className={style.conceptsContent}>
+      <h2 onClick={() => setActiveContent(1)}>HOLA</h2>
+    </div>,
+  ]
+
+  const centerScroll = () => {
     console.log('hola')
-    // skillsWrapper.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    skillsWrapper.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
   return (
     <section id='Skills' className={style.skillsContainer}>
-      <CSSTransition
-        in={showSkills}
-        timeout={2000}
-        nodeRef={skillsWrapper}
-        classNames={{
-          enter: style['skillsWrapper-enter'],
-          enterActive: style['skillsWrapper-enterActive'],
-          exit: style['skillsWrapper-exit'],
-          exitActive: style['skillsWrapper-exitActive'],
-        }}
-        unmountOnExit
-      >
-        <div ref={skillsWrapper} className={style.skillsWrapper}>
-          <div className={style.header}>
-            <h2>{globalTitles(`skills`)}</h2>
-          </div>
-          <TechSkills></TechSkills>
-          <ArrowButton onClick={() => setShowSkills(false)} className={style.button}></ArrowButton>
-        </div>
-      </CSSTransition>
-      {!showSkills && (
-        <div ref={conceptsWrapper} className={style.conceptsWrapper}>
-          <h2 onClick={() => setShowSkills(true)}>HOLA</h2>
-        </div>
-      )}
+      <div ref={skillsWrapper} className={style.skillsWrapper}>
+        <TransitionGroup>
+          <CSSTransition
+            key={activeContent}
+            nodeRef={currentContentRef}
+            timeout={3000}
+            classNames={{
+              enter: style['wrapperContent-enter'],
+              enterActive: style['wrapperContent-enter-active'],
+              exit: style['wrapperContent-exit'],
+              exitActive: style['wrapperContent-exit-active'],
+            }}
+            onEnter={centerScroll}
+            unmountOnExit
+          >
+            {contents[activeContent]}
+          </CSSTransition>
+        </TransitionGroup>
+      </div>
       <Principles></Principles>
       <Parallax translateY={['-350px', '0px']}>
         <div className={style.circle}></div>
