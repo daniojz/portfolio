@@ -39,7 +39,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transform: translateX(100vw);
       color: white;
       font-weight: bolder;
       font-size: 30px;
@@ -58,6 +57,29 @@
     .wrapperContent-exit-active {
       transition: transform 3s ease;
       transform: translateX(-100vw);
+    }
+
+    .fade-enter {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    .fade-enter-active {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    .fade-exit {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    .fade-exit-active {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    .fade-enter-active,
+    .fade-exit-active {
+      transition:
+        opacity 2s,
+        transform 2s;
     }
   }
   .skillsWrapper-exit {
