@@ -9,33 +9,18 @@ import { CSSTransition, SwitchTransition } from 'react-transition-group'
 
 const Skills = () => {
   const [globalTitles] = useTranslation('global', { keyPrefix: 'global.titles' })
-  const [activeContentState, setActiveContentState] = useState('skills')
+  const [activeContentState, setActiveContentState] = useState(true)
 
   const skillsWrapper = useRef()
   const skillsComponent = useRef(null)
   const conceptsComponent = useRef(null)
-  const currentContentRef = activeContentState === 'skills' ? skillsComponent : conceptsComponent
-  const skillsContent = (
-    <div ref={skillsComponent} className={style.skillsContent}>
-      <div className={style.header}>
-        <h2>{globalTitles(`skills`)}</h2>
-      </div>
-      <TechSkills></TechSkills>
-      <ArrowButton
-        onClick={() => setActiveContentState('concepts')}
-        className={style.button}
-      ></ArrowButton>
-    </div>
-  )
-  const conceptsContent = (
-    <div ref={conceptsComponent} className={style.conceptsContent}>
-      <h2 onClick={() => setActiveContentState('skills')}>HOLA</h2>
-    </div>
-  )
+  const currentContentRef = activeContentState ? skillsComponent : conceptsComponent
 
   const centerScroll = () => {
     console.log('hola')
+
     skillsWrapper.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    document.body.style.overflow = 'hidden' // Bloquear scroll
   }
 
   return (
@@ -44,15 +29,44 @@ const Skills = () => {
         <SwitchTransition>
           <CSSTransition
             key={activeContentState}
-            nodeRef={activeContentState === 'skills' ? skillsComponent : conceptsComponent}
+            nodeRef={currentContentRef}
             addEndListener={(done) =>
               currentContentRef.current.addEventListener('transitionend', done, false)
             }
             onEnter={centerScroll}
-            classNames='fade'
-            unmountOnExit
+            classNames={{
+              enter: style['fade-enter'],
+              enterActive: style['fade-enter-active'],
+              exit: style['fade-exit'],
+              exitActive: style['fade-exit-active'],
+            }}
           >
-            {activeContentState === 'skills' ? skillsContent : conceptsContent}
+            <div ref={currentContentRef}>
+              {activeContentState ? (
+                <div className={style.skillsContent}>
+                  <div className={style.header}>
+                    <h2>{globalTitles(`skills`)}</h2>
+                  </div>
+                  <TechSkills />
+                  <ArrowButton
+                    onClick={() =>
+                      setActiveContentState((activeContentState) => !activeContentState)
+                    }
+                    className={style.button}
+                  />
+                </div>
+              ) : (
+                <div className={style.conceptsContent}>
+                  <h2
+                    onClick={() =>
+                      setActiveContentState((activeContentState) => !activeContentState)
+                    }
+                  >
+                    HOLA
+                  </h2>
+                </div>
+              )}
+            </div>
           </CSSTransition>
         </SwitchTransition>
       </div>

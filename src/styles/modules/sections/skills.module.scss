@@ -44,24 +44,9 @@
       font-size: 30px;
     }
 
-    .wrapperContent-enter {
-      transform: translateX(-100vw);
-    }
-    .wrapperContent-enter-active {
-      transition: transform 3s ease;
-      transform: translateX(0vw);
-    }
-    .wrapperContent-exit {
-      transform: translateX(0vw);
-    }
-    .wrapperContent-exit-active {
-      transition: transform 3s ease;
-      transform: translateX(-100vw);
-    }
-
     .fade-enter {
       opacity: 0;
-      transform: translateX(-100%);
+      transform: translateX(100%);
     }
     .fade-enter-active {
       opacity: 1;
@@ -73,13 +58,13 @@
     }
     .fade-exit-active {
       opacity: 0;
-      transform: translateX(100%);
+      transform: translateX(-100%);
     }
     .fade-enter-active,
     .fade-exit-active {
       transition:
-        opacity 2s,
-        transform 2s;
+        opacity 0.8s,
+        transform 0.5s;
     }
   }
   .skillsWrapper-exit {
