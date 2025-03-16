@@ -4,7 +4,7 @@ import TechSkills from '../../../components/TechSkills/TechSkills'
 import Principles from '../../../components/Principles/Principles'
 import { Parallax } from 'react-scroll-parallax'
 import ArrowButton from '../../../components/ArrowButton/ArrowButton'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
 
 const Skills = () => {
@@ -16,12 +16,32 @@ const Skills = () => {
   const conceptsComponent = useRef(null)
   const currentContentRef = activeContentState ? skillsComponent : conceptsComponent
 
-  const centerScroll = () => {
-    console.log('hola')
-
+  const focusSection = () => {
     skillsWrapper.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    document.body.style.overflow = 'hidden' // Bloquear scroll
+    document.getElementById('AppContainer').classList.add('no-scroll')
   }
+  const deFocusSection = () => {
+    document.getElementById('AppContainer').classList.remove('no-scroll')
+  }
+  const disableScrolling = (e) => {
+    e.preventDefault()
+  }
+
+  useEffect(() => {
+    const AppContainer = document.getElementById('AppContainer')
+
+    if (activeContentState) {
+      deFocusSection()
+
+      AppContainer.removeEventListener('wheel', disableScrolling)
+    } else {
+      focusSection()
+
+      AppContainer.addEventListener('wheel', disableScrolling, { passive: false })
+    }
+
+    return () => AppContainer.removeEventListener('wheel', disableScrolling)
+  }, [activeContentState])
 
   return (
     <section id='Skills' className={style.skillsContainer}>
@@ -33,7 +53,6 @@ const Skills = () => {
             addEndListener={(done) =>
               currentContentRef.current.addEventListener('transitionend', done, false)
             }
-            onEnter={centerScroll}
             classNames={{
               enter: style['fade-enter'],
               enterActive: style['fade-enter-active'],
@@ -72,7 +91,9 @@ const Skills = () => {
       </div>
       <Principles></Principles>
       <Parallax translateY={['-350px', '0px']}>
-        <div className={style.circle}></div>
+        <div
+          className={`${style.circle} ${activeContentState ? '' : style['circle-concepts-active']}`}
+        ></div>
       </Parallax>
     </section>
   )

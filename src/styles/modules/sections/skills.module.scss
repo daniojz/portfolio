@@ -5,7 +5,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 
   .header {
@@ -82,13 +81,18 @@
   .circle {
     content: '';
     position: absolute;
-    left: -128vw;
+    left: -55vw;
     width: 900px;
     height: 900px;
     background: var(--color-circle-values);
     border-radius: var(--border-radius-circle);
     box-shadow: var(--box-shadow-circle-header);
     z-index: -10;
+    transition: left 0.5s ease; //transicion para cuando cambia de estado translateX
+  }
+
+  .circle-concepts-active {
+    left: 6vw !important;
   }
 }
 
@@ -103,13 +107,14 @@
     .circle {
       content: '';
       position: absolute;
-      left: -80vw;
+      left: -40vw;
       width: 1000px;
       height: 1000px;
       background: var(--color-circle-values);
       border-radius: var(--border-radius-circle);
       box-shadow: var(--box-shadow-circle-header);
       z-index: 10000;
+      transition: left 0.5s ease;
     }
   }
 }

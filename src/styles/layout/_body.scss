@@ -1,7 +1,4 @@
 body {
   background: var(--color-background-general-body);
-}
-
-body.no-scroll {
-  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
 }
