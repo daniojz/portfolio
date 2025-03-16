@@ -145,25 +145,13 @@ body {
   /*  */
   -moz-osx-font-smoothing: grayscale;
   /*overflow-x: hidden;*/
-  overflow: hidden;
 }
 
 /*Scroll Personalizado*/
-.App {
-  height: 100vh;
-  overflow: overlay;
-}
-.App::-webkit-scrollbar {
-}
-.App::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0);
-}
-.App::-webkit-scrollbar-thumb {
-  background: var(--color-primary-200);
-}
-.App::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-.App.no-scroll::-webkit-scrollbar {
-  visibility: hidden;
-}
+// .App {
+//   height: 100vh;
+//   overflow: overlay;
+// }
+// .App.no-scroll::-webkit-scrollbar {
+//   visibility: hidden;
+// }

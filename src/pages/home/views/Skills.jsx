@@ -18,10 +18,6 @@ const Skills = () => {
 
   const focusSection = () => {
     skillsWrapper.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    document.getElementById('AppContainer').classList.add('no-scroll')
-  }
-  const deFocusSection = () => {
-    document.getElementById('AppContainer').classList.remove('no-scroll')
   }
   const disableScrolling = (e) => {
     e.preventDefault()
@@ -31,8 +27,6 @@ const Skills = () => {
     const AppContainer = document.getElementById('AppContainer')
 
     if (activeContentState) {
-      deFocusSection()
-
       AppContainer.removeEventListener('wheel', disableScrolling)
     } else {
       focusSection()
