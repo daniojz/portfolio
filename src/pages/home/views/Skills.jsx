@@ -85,9 +85,13 @@ const Skills = () => {
       </div>
       <Principles></Principles>
       <Parallax translateY={['-350px', '0px']}>
-        <div
-          className={`${style.circle} ${activeContentState ? '' : style['circle-concepts-active']}`}
-        ></div>
+        <div className={style.circleContainer}>
+          <span
+            className={`${style.circle} ${
+              activeContentState ? '' : style['circle-concepts-active']
+            }`}
+          ></span>
+        </div>
       </Parallax>
     </section>
   )
