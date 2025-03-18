@@ -15,11 +15,11 @@ const TechSkills = () => {
   }
 
   useEffect(() => {
-    //requestAnimationFrame asegura que la funcion que se le pasa se ejecuta una vez se
-    //se ha renderizado/cargado los elementos del DOM, ya que esta funcionalidad sirve para
-    //sincronizar la ejecución con la tasa de refresco de repintado de la pantalla.
-    //De esta manera nos aseguramos de poder acceder a los <icon> una vez se han renderizados,
-    //ya que, por lo contrario, querySelectorAll('svg') nos devolveria nada.
+    /* requestAnimationFrame(callback) asegura que la funcion que se le pasa se ejecuta una vez se
+    se ha renderizado/cargado los elementos del DOM, ya que esta funcionalidad sirve para
+    sincronizar la ejecución con la tasa de refresco de repintado de la pantalla.
+    De esta manera nos aseguramos de poder acceder a los <icon> una vez se han renderizados,
+    ya que, por lo contrario, querySelectorAll('svg') nos devolveria nada. */
     const frameId = requestAnimationFrame(() => { 
       const icons = skillsContainer.current?.querySelectorAll('svg');
       if (icons.length > 0) {
