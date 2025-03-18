@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from 'react'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
 
 const Skills = () => {
-  const [globalTitles] = useTranslation('global', { keyPrefix: 'global.titles' })
+  const [text] = useTranslation('home', { keyPrefix: 'skills' })
   const [activeContentState, setActiveContentState] = useState(true)
 
   const skillsWrapper = useRef()
@@ -16,6 +16,35 @@ const Skills = () => {
   const conceptsComponent = useRef(null)
   const currentContentRef = activeContentState ? skillsComponent : conceptsComponent
 
+  const SkillsComponent = () => {
+    return (
+      <div className={style.skillsContent}>
+        <div className={style.header}>
+          <h2>{text(`titleSection`)}</h2>
+        </div>
+        <TechSkills/>
+        <ArrowButton
+          onClick={() =>
+            setActiveContentState((activeContentState) => !activeContentState)
+          }
+          className={style.button}
+        />
+      </div>
+    )
+  }
+  const PrinciplesComponent = () => {
+    return (
+      <div className={style.conceptsContent}>
+        <h2
+          onClick={() =>
+            setActiveContentState((activeContentState) => !activeContentState)
+          }
+        >
+          HOLA
+        </h2>
+      </div>
+    )
+  }
   const focusSection = () => {
     skillsWrapper.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
@@ -55,30 +84,7 @@ const Skills = () => {
             }}
           >
             <div ref={currentContentRef}>
-              {activeContentState ? (
-                <div className={style.skillsContent}>
-                  <div className={style.header}>
-                    <h2>{globalTitles(`skills`)}</h2>
-                  </div>
-                  <TechSkills />
-                  <ArrowButton
-                    onClick={() =>
-                      setActiveContentState((activeContentState) => !activeContentState)
-                    }
-                    className={style.button}
-                  />
-                </div>
-              ) : (
-                <div className={style.conceptsContent}>
-                  <h2
-                    onClick={() =>
-                      setActiveContentState((activeContentState) => !activeContentState)
-                    }
-                  >
-                    HOLA
-                  </h2>
-                </div>
-              )}
+              {activeContentState ? <SkillsComponent></SkillsComponent> : <PrinciplesComponent></PrinciplesComponent> }
             </div>
           </CSSTransition>
         </SwitchTransition>
