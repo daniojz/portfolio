@@ -40,7 +40,7 @@ const Skills = () => {
             setActiveContentState((activeContentState) => !activeContentState)
           }
         >
-          HOLA
+          PRUEBA
         </h2>
       </div>
     )

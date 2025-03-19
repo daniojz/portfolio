@@ -80,26 +80,25 @@
 
   .circleContainer {
     position: absolute;
-    width: max-content;
+    width: 100%;
     display: flex;
     justify-content: center;
 
-    .circle {
+    .circle::after {
       content: '';
       position: relative;
       left: -50vw;
+      top:0;
       width: 900px;
       height: 900px;
       background: var(--color-circle-values);
       border-radius: var(--border-radius-circle);
       box-shadow: var(--box-shadow-circle-header);
       z-index: -10;
-      transition: left 0.5s ease;
-      transition: width 0.5s ease;
-      transition: height 0.5s ease;
+      transition: all 1s ease-out;
     }
 
-    .circle-concepts-active {
+    .circle-concepts-active::after {
       width: 1200px;
       height: 1200px;
       top: -5vh;
@@ -116,7 +115,7 @@
       top: 50%;
     }
 
-    .circle {
+    .circle::after {
       content: '';
       position: relative;
       left: -40vw;

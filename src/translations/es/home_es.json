@@ -121,36 +121,6 @@
       "continousLearning": "Mejora y aprendizaje continuo",
       "teamWork": "Trabajo en equipo",
       "clientOrientation": "Orientación al cliente"
-    },
-    "skillsIcons": {
-      "layer0": [
-        { "id": "html", "icon": "logos:html-5" },
-        { "id": "html", "icon": "logos:html-5" },
-        { "id": "css", "icon": "logos:css-3" },
-        { "id": "javascript", "icon": "logos:javascript" },
-        { "id": "react", "icon": "logos:react" },
-        { "id": "redux", "icon": "logos:redux" },
-        { "id": "java", "icon": "logos:java" },
-        { "id": "spring", "icon": "logos:spring-icon" }
-      ],
-      "layer1": [
-        { "id": "redux-saga", "icon": "logos:redux-saga" },
-        { "id": "androidstudio", "icon": "devicon:androidstudio" },
-        { "id": "kotlin", "icon": "logos:kotlin-icon" },
-        { "id": "firebase", "icon": "logos:firebase" },
-        { "id": "bootstrap", "icon": "logos:bootstrap" },
-        { "id": "figma", "icon": "logos:figma" },
-        { "id": "jquery", "icon": "devicon:jquery-wordmark" }
-      ],
-      "layer2": [
-        { "id": "c-sharp", "icon": "logos:c-sharp" },
-        { "id": "php", "icon": "logos:php" },
-        { "id": "linux", "icon": "logos:linux-tux" },
-        { "id": "sqlite", "icon": "logos:sqlite" },
-        { "id": "typescript", "icon": "logos:typescript-icon" },
-        { "id": "mysql", "icon": "logos:mysql" },
-        { "id": "notion", "icon": "logos:notion-icon" }
-      ]
     }
   },
   "education": {
