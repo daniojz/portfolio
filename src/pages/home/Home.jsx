@@ -1,9 +1,9 @@
-import Education from './views/Education'
-import Experience from './views/Experience'
-import Intro from './views/Intro'
-import Skills from './views/Skills'
-import Proyects from './views/Projects'
-import Contact from './views/Contact'
+import Education from './sections/Education'
+import Experience from './sections/Experience'
+import Intro from './sections/Intro'
+import Skills from './sections/Skills'
+import Proyects from './sections/Projects'
+import Contact from './sections/Contact'
 import Footer from '../../components/Footer/footer'
 
 const Home = () => {

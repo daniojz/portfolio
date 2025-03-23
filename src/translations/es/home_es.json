@@ -17,15 +17,7 @@
             "finishDate": "jun. 2023",
             "actualWork": false,
             "description": "Lorem ipsum dolor sit amet consectetur. Tincidunt tristique ac duis ullamcorper elit egestas cursus. Ipsum diam bibendum suspendisse quis tempor facilisis. In diam nunc mauris vivamus dis aliquet lorem leo blandit. Duis ipsum enim dui netus ac vestibulum et faucibus quis.",
-            "aptitudes": [
-              "HTML",
-              "CSS",
-              "React",
-              "Redux",
-              "JavaScript",
-              "Aprendizaje Continuo",
-              "Redux Saga"
-            ]
+            "aptitudes": ["HTML", "CSS", "React", "Redux", "JavaScript", "Aprendizaje Continuo", "Redux Saga"]
           },
           {
             "id": "2",
@@ -34,15 +26,7 @@
             "finishDate": "jun. 2023",
             "actualWork": false,
             "description": "Lorem ipsum dolor sit amet consectetur. Tincidunt tristique ac duis ullamcorper elit egestas cursus. Ipsum diam bibendum suspendisse quis tempor facilisis. In diam nunc mauris vivamus dis aliquet lorem leo blandit. Duis ipsum enim dui netus ac vestibulum et faucibus quis.",
-            "aptitudes": [
-              "HTML",
-              "CSS",
-              "React",
-              "Redux",
-              "JavaScript",
-              "Aprendizaje Continuo",
-              "Redux Saga"
-            ]
+            "aptitudes": ["HTML", "CSS", "React", "Redux", "JavaScript", "Aprendizaje Continuo", "Redux Saga"]
           }
         ]
       },
@@ -58,15 +42,7 @@
             "finishDate": "jun. 2023",
             "actualWork": false,
             "description": "Lorem ipsum dolor sit amet consectetur. Tincidunt tristique ac duis ullamcorper elit egestas cursus. Ipsum diam bibendum suspendisse quis tempor facilisis. In diam nunc mauris vivamus dis aliquet lorem leo blandit. Duis ipsum enim dui netus ac vestibulum et faucibus quis.",
-            "aptitudes": [
-              "HTML",
-              "CSS",
-              "React",
-              "Redux",
-              "JavaScript",
-              "Aprendizaje Continuo",
-              "Redux Saga"
-            ]
+            "aptitudes": ["HTML", "CSS", "React", "Redux", "JavaScript", "Aprendizaje Continuo", "Redux Saga"]
           },
           {
             "id": "2",
@@ -75,15 +51,7 @@
             "finishDate": "jun. 2023",
             "actualWork": false,
             "description": "Lorem ipsum dolor sit amet consectetur. Tincidunt tristique ac duis ullamcorper elit egestas cursus. Ipsum diam bibendum suspendisse quis tempor facilisis. In diam nunc mauris vivamus dis aliquet lorem leo blandit. Duis ipsum enim dui netus ac vestibulum et faucibus quis.",
-            "aptitudes": [
-              "HTML",
-              "CSS",
-              "React",
-              "Redux",
-              "JavaScript",
-              "Aprendizaje Continuo",
-              "Redux Saga"
-            ]
+            "aptitudes": ["HTML", "CSS", "React", "Redux", "JavaScript", "Aprendizaje Continuo", "Redux Saga"]
           }
         ]
       },
@@ -99,15 +67,7 @@
             "finishDate": "jun. 2023",
             "actualWork": false,
             "description": "Lorem ipsum dolor sit amet consectetur. Tincidunt tristique ac duis ullamcorper elit egestas cursus. Ipsum diam bibendum suspendisse quis tempor facilisis. In diam nunc mauris vivamus dis aliquet lorem leo blandit. Duis ipsum enim dui netus ac vestibulum et faucibus quis.",
-            "aptitudes": [
-              "HTML",
-              "CSS",
-              "React",
-              "Redux",
-              "JavaScript",
-              "Aprendizaje Continuo",
-              "Redux Saga"
-            ]
+            "aptitudes": ["HTML", "CSS", "React", "Redux", "JavaScript", "Aprendizaje Continuo", "Redux Saga"]
           }
         ]
       }
@@ -121,6 +81,25 @@
       "continousLearning": "Mejora y aprendizaje continuo",
       "teamWork": "Trabajo en equipo",
       "clientOrientation": "Orientación al cliente"
+    },
+    "knowledge": {
+      "titleSection": "Knowledge",
+      "concepts": [
+        "clean code",
+        "orientacion a objetos",
+        "mutabilidad & inmutabilidad",
+        "First Mobile",
+        "escalabilidad",
+        "programacion funcional",
+        "funciones puras",
+        "orientacion al cliente",
+        "diseño atomico",
+        "agnostico",
+        "AGILE",
+        "estados compartidos",
+        "componentes compartidos",
+        "tokes de diseño"
+      ]
     }
   },
   "education": {
@@ -137,15 +116,7 @@
         "averageGrade": "8,5",
         "date": "20/10/2001",
         "city": "Madrid",
-        "aptitudes": [
-          "HTML",
-          "CSS",
-          "React",
-          "Redux",
-          "JavaScript",
-          "Aprendizaje Continuo",
-          "Redux Saga"
-        ]
+        "aptitudes": ["HTML", "CSS", "React", "Redux", "JavaScript", "Aprendizaje Continuo", "Redux Saga"]
       },
       {
         "id": "2",
@@ -156,15 +127,7 @@
         "averageGrade": "8,5",
         "date": "20/10/2001",
         "city": "Madrid",
-        "aptitudes": [
-          "HTML",
-          "CSS",
-          "React",
-          "Redux",
-          "JavaScript",
-          "Aprendizaje Continuo",
-          "Redux Saga"
-        ]
+        "aptitudes": ["HTML", "CSS", "React", "Redux", "JavaScript", "Aprendizaje Continuo", "Redux Saga"]
       },
       {
         "id": "3",
@@ -175,15 +138,7 @@
         "averageGrade": "8,5",
         "date": "20/10/2001",
         "city": "Madrid",
-        "aptitudes": [
-          "HTML",
-          "CSS",
-          "React",
-          "Redux",
-          "JavaScript",
-          "Aprendizaje Continuo",
-          "Redux Saga"
-        ]
+        "aptitudes": ["HTML", "CSS", "React", "Redux", "JavaScript", "Aprendizaje Continuo", "Redux Saga"]
       }
     ]
   }
