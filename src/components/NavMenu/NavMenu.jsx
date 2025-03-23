@@ -85,17 +85,12 @@ const NavMenu = () => {
     <nav className={`${style.navMenu} ${style[`isNav-${hamburguerMenuState}`]}`} ref={nav}>
       <button onClick={onClickHamburguerMenuHandler} className={style.hamburgerButton}>
         <Icon
-          icon={`akar-icons:${
-            hamburguerMenuState === 'show' ? 'two-line-vertical' : 'two-line-horizontal'
-          }`}
+          icon={`akar-icons:${hamburguerMenuState === 'show' ? 'two-line-vertical' : 'two-line-horizontal'}`}
           width={40}
           height={40}
         />
       </button>
-      <div
-        className={`${style.content} ${style[`isContent-${hamburguerMenuState}`]}`}
-        ref={content}
-      >
+      <div className={`${style.content} ${style[`isContent-${hamburguerMenuState}`]}`} ref={content}>
         <a href='/' className={style.homeLink}>
           <span>{t(`homeLinkText`)}</span>
         </a>
@@ -111,10 +106,7 @@ const NavMenu = () => {
               </li>
             ))}
           </ul>
-          <div
-            className={`${style.config} ${style[`isNavOption-${hamburguerMenuState}`]}`}
-            ref={configOption}
-          >
+          <div className={`${style.config} ${style[`isNavOption-${hamburguerMenuState}`]}`} ref={configOption}>
             <ThemeButton></ThemeButton>
             <LanguajeButton></LanguajeButton>
           </div>

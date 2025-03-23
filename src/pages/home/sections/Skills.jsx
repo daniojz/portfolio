@@ -13,8 +13,8 @@ const Skills = () => {
 
   const skillsWrapper = useRef()
   const skillsComponent = useRef(null)
-  const conceptsComponent = useRef(null)
-  const currentContentRef = activeContentState ? skillsComponent : conceptsComponent
+  const knowledgeComponent = useRef(null)
+  const currentContentRef = activeContentState ? skillsComponent : knowledgeComponent
 
   const SkillsComponent = () => {
     return (
@@ -22,26 +22,28 @@ const Skills = () => {
         <div className={style.header}>
           <h2>{text(`titleSection`)}</h2>
         </div>
-        <TechSkills/>
+        <TechSkills />
         <ArrowButton
-          onClick={() =>
-            setActiveContentState((activeContentState) => !activeContentState)
-          }
+          onClick={() => setActiveContentState((activeContentState) => !activeContentState)}
           className={style.button}
         />
       </div>
     )
   }
-  const PrinciplesComponent = () => {
+  const KnowledgeComponent = () => {
     return (
-      <div className={style.conceptsContent}>
-        <h2
-          onClick={() =>
-            setActiveContentState((activeContentState) => !activeContentState)
-          }
-        >
-          PRUEBA
-        </h2>
+      <div className={style.knowledgeContent}>
+        <div className={style.header}>
+          <h2>{text(`knowledge.titleSection`)}</h2>
+        </div>
+        <div className={style.searchFilterContainer}>
+          <input className={style.searchFilter}></input>
+        </div>
+        <ArrowButton
+          onClick={() => setActiveContentState((activeContentState) => !activeContentState)}
+          className={style.button}
+          direction='left'
+        />
       </div>
     )
   }
@@ -73,9 +75,7 @@ const Skills = () => {
           <CSSTransition
             key={activeContentState}
             nodeRef={currentContentRef}
-            addEndListener={(done) =>
-              currentContentRef.current.addEventListener('transitionend', done, false)
-            }
+            addEndListener={(done) => currentContentRef.current.addEventListener('transitionend', done, false)}
             classNames={{
               enter: style['fade-enter'],
               enterActive: style['fade-enter-active'],
@@ -84,7 +84,7 @@ const Skills = () => {
             }}
           >
             <div ref={currentContentRef}>
-              {activeContentState ? <SkillsComponent></SkillsComponent> : <PrinciplesComponent></PrinciplesComponent> }
+              {activeContentState ? <SkillsComponent></SkillsComponent> : <KnowledgeComponent></KnowledgeComponent>}
             </div>
           </CSSTransition>
         </SwitchTransition>
@@ -92,11 +92,7 @@ const Skills = () => {
       <Principles></Principles>
       <Parallax translateY={['-350px', '0px']}>
         <div className={style.circleContainer}>
-          <span
-            className={`${style.circle} ${
-              activeContentState ? '' : style['circle-concepts-active']
-            }`}
-          ></span>
+          <span className={`${style.circle} ${activeContentState ? '' : style['circle-knowledge-active']}`}></span>
         </div>
       </Parallax>
     </section>
